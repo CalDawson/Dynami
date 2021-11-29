@@ -10,10 +10,110 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_29_005604) do
+ActiveRecord::Schema.define(version: 2021_11_29_043307) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "chat_users", force: :cascade do |t|
+    t.bigint "chatroom_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["chatroom_id"], name: "index_chat_users_on_chatroom_id"
+    t.index ["user_id"], name: "index_chat_users_on_user_id"
+  end
+
+  create_table "chatrooms", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "post_id", null: false
+    t.string "content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["post_id"], name: "index_comments_on_post_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
+  create_table "exercises", force: :cascade do |t|
+    t.string "name"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_exercises_on_user_id"
+  end
+
+  create_table "foods", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "name"
+    t.integer "carbs"
+    t.integer "protein"
+    t.integer "fats"
+    t.integer "calories"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_foods_on_user_id"
+  end
+
+  create_table "meal_contents", force: :cascade do |t|
+    t.bigint "meal_id", null: false
+    t.bigint "food_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["food_id"], name: "index_meal_contents_on_food_id"
+    t.index ["meal_id"], name: "index_meal_contents_on_meal_id"
+  end
+
+  create_table "meal_eatens", force: :cascade do |t|
+    t.bigint "meal_id", null: false
+    t.bigint "user_id", null: false
+    t.date "date"
+    t.string "type"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["meal_id"], name: "index_meal_eatens_on_meal_id"
+    t.index ["user_id"], name: "index_meal_eatens_on_user_id"
+  end
+
+  create_table "meals", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_meals_on_user_id"
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.bigint "chatroom_id", null: false
+    t.bigint "user_id", null: false
+    t.string "content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["chatroom_id"], name: "index_messages_on_chatroom_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "caption"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_posts_on_user_id"
+  end
+
+  create_table "reads", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "message_id", null: false
+    t.boolean "read"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["message_id"], name: "index_reads_on_message_id"
+    t.index ["user_id"], name: "index_reads_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -27,4 +127,55 @@ ActiveRecord::Schema.define(version: 2021_11_29_005604) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "workout_exercises", force: :cascade do |t|
+    t.bigint "exercise_id", null: false
+    t.bigint "workout_id", null: false
+    t.integer "reps"
+    t.integer "weight"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["exercise_id"], name: "index_workout_exercises_on_exercise_id"
+    t.index ["workout_id"], name: "index_workout_exercises_on_workout_id"
+  end
+
+  create_table "workout_sessions", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "workout_id", null: false
+    t.datetime "time"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_workout_sessions_on_user_id"
+    t.index ["workout_id"], name: "index_workout_sessions_on_workout_id"
+  end
+
+  create_table "workouts", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "name"
+    t.string "type"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_workouts_on_user_id"
+  end
+
+  add_foreign_key "chat_users", "chatrooms"
+  add_foreign_key "chat_users", "users"
+  add_foreign_key "comments", "posts"
+  add_foreign_key "comments", "users"
+  add_foreign_key "exercises", "users"
+  add_foreign_key "foods", "users"
+  add_foreign_key "meal_contents", "foods"
+  add_foreign_key "meal_contents", "meals"
+  add_foreign_key "meal_eatens", "meals"
+  add_foreign_key "meal_eatens", "users"
+  add_foreign_key "meals", "users"
+  add_foreign_key "messages", "chatrooms"
+  add_foreign_key "messages", "users"
+  add_foreign_key "posts", "users"
+  add_foreign_key "reads", "messages"
+  add_foreign_key "reads", "users"
+  add_foreign_key "workout_exercises", "exercises"
+  add_foreign_key "workout_exercises", "workouts"
+  add_foreign_key "workout_sessions", "users"
+  add_foreign_key "workout_sessions", "workouts"
+  add_foreign_key "workouts", "users"
 end
