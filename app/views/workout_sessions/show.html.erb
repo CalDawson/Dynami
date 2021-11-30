@@ -1,0 +1,19 @@
+<h2>Workout Show page</h2>
+
+<div class="card-container">
+  <div class="card">
+    <div>
+        <div class="card-heading">
+          <h2><%= "Workout Name: #{@session.workout.name}" %></h2>
+          <h3><%= "Workout Type: #{@session.workout.workout_type}" %></h3>
+          <% @session.workout.workout_exercises.each do |workout_log|  %>
+            <p><%= "Exercise Name: #{workout_log.exercise.name}" %></p>
+            <p><%= "Reps: #{workout_log.reps}" %></p>
+            <p><%= "Sets: placeholder" %></p>
+            <p><%= "Weight: #{workout_log.weight}" %></p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<h1>Your Workouts</h1>
+
+<% @workout_sessions.each do |workout_session| %>
+
+<div class="card-container">
+  <div class="card">
+        <div class="card-heading">
+          <h2 class="heading"><%="#{workout_session.workout.name}, #{workout_session.workout.workout_type}"  %></h2>
+          <%= link_to "details", workout_session_path(workout_session) %>
+        </div>
+    </div>
+</div>
+<% end %>
+
+<h2><%= link_to "Add A New Workout Session", new_workout_session_path %></h2>
