@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+user = User.create!({ email: 'jesse@dynami.com', password: '123456', password_confirmation: '123456' })
+user2 = User.create!({ email: 'callum@dynami.com', password: '123456', password_confirmation: '123456' })
+exercise = Exercise.create!({ name: "Bench Press", user: user})
+workout = Workout.create!({ workout_type: "Push", name: "Chest Day", user: user})
+WorkoutExercise.create!({ workout: workout, exercise: exercise, reps: 10, weight: 70 })
+WorkoutSession.create!({ user: user, workout: workout, time: Time.now })

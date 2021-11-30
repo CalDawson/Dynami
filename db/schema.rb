@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(version: 2021_11_29_231124) do
     t.bigint "meal_id", null: false
     t.bigint "user_id", null: false
     t.date "date"
-    t.string "type"
+    t.string "meal_type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["meal_id"], name: "index_meal_eatens_on_meal_id"
@@ -145,7 +145,7 @@ ActiveRecord::Schema.define(version: 2021_11_29_231124) do
   create_table "workouts", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.string "name"
-    t.string "type"
+    t.string "workout_type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "visible", default: true
