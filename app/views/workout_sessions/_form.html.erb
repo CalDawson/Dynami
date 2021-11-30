@@ -1,0 +1,7 @@
+<%= simple_form_for(session) do |f| %>
+<%= f.input :name, label: 'Name Of Workout?'%>
+<%= f.input :workout_type, label: 'Type Of Workout?'%>
+<div class="form-actions">
+    <%= f.button :submit, { class: 'btn btn-primary' } %>
+  </div>
+<% end %>

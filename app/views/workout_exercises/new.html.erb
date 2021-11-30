@@ -1,0 +1,11 @@
+<h2>Workout exercises new page</h2>
+
+<%= simple_form_for([@workout, @workout_exercise]) do |f| %>
+<%= f.input :name, label: 'Name Of Exercise?'%>
+<%= f.input :reps, label: 'How Many Reps?'%>
+<%= f.input :sets, label: 'How Many Sets?'%>
+<%= f.input :weight, label: 'How Much Weight?'%>
+<div class="form-actions">
+    <%= f.button :submit, { class: 'btn btn-primary' } %>
+  </div>
+<% end %>
