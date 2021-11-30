@@ -4,7 +4,7 @@ class CreateMealEatens < ActiveRecord::Migration[6.0]
       t.references :meal, null: false, foreign_key: true
       t.references :user, null: false, foreign_key: true
       t.date :date
-      t.string :type
+      t.string :meal_type
 
       t.timestamps
     end
