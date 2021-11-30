@@ -10,23 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_29_043307) do
+ActiveRecord::Schema.define(version: 2021_11_29_231124) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "chat_users", force: :cascade do |t|
-    t.bigint "chatroom_id", null: false
-    t.bigint "user_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["chatroom_id"], name: "index_chat_users_on_chatroom_id"
-    t.index ["user_id"], name: "index_chat_users_on_user_id"
-  end
-
   create_table "chatrooms", force: :cascade do |t|
+    t.bigint "user1_id"
+    t.bigint "user2_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user1_id"], name: "index_chatrooms_on_user1_id"
+    t.index ["user2_id"], name: "index_chatrooms_on_user2_id"
   end
 
   create_table "comments", force: :cascade do |t|
@@ -48,7 +43,6 @@ ActiveRecord::Schema.define(version: 2021_11_29_043307) do
   end
 
   create_table "foods", force: :cascade do |t|
-    t.bigint "user_id", null: false
     t.string "name"
     t.integer "carbs"
     t.integer "protein"
@@ -56,7 +50,6 @@ ActiveRecord::Schema.define(version: 2021_11_29_043307) do
     t.integer "calories"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_foods_on_user_id"
   end
 
   create_table "meal_contents", force: :cascade do |t|
@@ -84,6 +77,7 @@ ActiveRecord::Schema.define(version: 2021_11_29_043307) do
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "visible", default: true
     t.index ["user_id"], name: "index_meals_on_user_id"
   end
 
@@ -154,15 +148,15 @@ ActiveRecord::Schema.define(version: 2021_11_29_043307) do
     t.string "type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "visible", default: true
     t.index ["user_id"], name: "index_workouts_on_user_id"
   end
 
-  add_foreign_key "chat_users", "chatrooms"
-  add_foreign_key "chat_users", "users"
+  add_foreign_key "chatrooms", "users", column: "user1_id"
+  add_foreign_key "chatrooms", "users", column: "user2_id"
   add_foreign_key "comments", "posts"
   add_foreign_key "comments", "users"
   add_foreign_key "exercises", "users"
-  add_foreign_key "foods", "users"
   add_foreign_key "meal_contents", "foods"
   add_foreign_key "meal_contents", "meals"
   add_foreign_key "meal_eatens", "meals"
