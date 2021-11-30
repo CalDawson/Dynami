@@ -1,0 +1,3 @@
+<% @chatrooms.each do |chatroom| %>
+  <%= link_to chatroom.users.find { |user| user != current_user}.email, chatroom_path(chatroom) %>
+<%end %>

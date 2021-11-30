@@ -20,7 +20,7 @@ Rails.application.routes.draw do
 
   resources :comments, only: %i[create destroy]
 
-  resources :chatroom, only: %i[show index] do
+  resources :chatrooms, only: %i[show index] do
     resources :messages, only: %i[create destroy]
   end
 end
