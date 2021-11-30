@@ -23,4 +23,8 @@ Rails.application.routes.draw do
   resources :chatrooms, only: %i[show index] do
     resources :messages, only: %i[create destroy]
   end
+
+  resources :users, only: %i[] do
+    resources :chatrooms, only: %i[create]
+  end
 end

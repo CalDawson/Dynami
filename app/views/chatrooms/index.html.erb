@@ -1,3 +1,8 @@
+<h2>Chats</h2>
 <% @chatrooms.each do |chatroom| %>
-  <%= link_to chatroom.users.find { |user| user != current_user}.email, chatroom_path(chatroom) %>
+  <%= link_to chatroom.users.find { |u| u != current_user}.email, chatroom_path(chatroom) %>
+<%end %>
+<h2>Other members</h2>
+<% @other_users.each do |user| %>
+  <%= link_to user.email, user_chatrooms_path(user), method: 'post' %>
 <%end %>
