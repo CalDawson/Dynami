@@ -8,13 +8,11 @@ Rails.application.routes.draw do
   end
 
   resources :workout_sessions, only: %i[index destroy edit update new create show]
-  resources :workouts, only: %i[new create destroy edit update] do
+  resources :workouts, only: %i[create destroy edit update show] do
     resources :workout_exercises, only: %i[new create]
-    resources :exercises, only: %i[new create]
   end
 
   resources :workout_exercises, only: %i[edit update destroy]
-  resources :exercises, only: %i[destroy edit update index]
 
   resources :posts, only: %i[create show new destroy]
 

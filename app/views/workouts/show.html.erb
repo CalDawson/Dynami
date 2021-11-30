@@ -1,0 +1,5 @@
+<h2>Workout Show Page</h2>
+
+<%= render "shared/exercises", exercises: @workout.workout_exercises %>
+
+<p><%= link_to "Add a New Workout", new_workout_workout_exercise_path(@workout) %></p>

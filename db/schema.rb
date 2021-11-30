@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_29_231124) do
+ActiveRecord::Schema.define(version: 2021_11_30_052008) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,14 +32,6 @@ ActiveRecord::Schema.define(version: 2021_11_29_231124) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["post_id"], name: "index_comments_on_post_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
-  end
-
-  create_table "exercises", force: :cascade do |t|
-    t.string "name"
-    t.bigint "user_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_exercises_on_user_id"
   end
 
   create_table "foods", force: :cascade do |t|
@@ -122,13 +114,13 @@ ActiveRecord::Schema.define(version: 2021_11_29_231124) do
   end
 
   create_table "workout_exercises", force: :cascade do |t|
-    t.bigint "exercise_id", null: false
     t.bigint "workout_id", null: false
     t.integer "reps"
     t.integer "weight"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["exercise_id"], name: "index_workout_exercises_on_exercise_id"
+    t.integer "sets"
+    t.string "name"
     t.index ["workout_id"], name: "index_workout_exercises_on_workout_id"
   end
 
@@ -156,7 +148,6 @@ ActiveRecord::Schema.define(version: 2021_11_29_231124) do
   add_foreign_key "chatrooms", "users", column: "user2_id"
   add_foreign_key "comments", "posts"
   add_foreign_key "comments", "users"
-  add_foreign_key "exercises", "users"
   add_foreign_key "meal_contents", "foods"
   add_foreign_key "meal_contents", "meals"
   add_foreign_key "meal_eatens", "meals"
@@ -167,7 +158,6 @@ ActiveRecord::Schema.define(version: 2021_11_29_231124) do
   add_foreign_key "posts", "users"
   add_foreign_key "reads", "messages"
   add_foreign_key "reads", "users"
-  add_foreign_key "workout_exercises", "exercises"
   add_foreign_key "workout_exercises", "workouts"
   add_foreign_key "workout_sessions", "users"
   add_foreign_key "workout_sessions", "workouts"

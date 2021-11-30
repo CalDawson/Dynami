@@ -1,0 +1,15 @@
+<% exercises.each do |workout_log|  %>
+  <div class="card-container">
+    <div class="card">
+      <div>
+          <div class="card-heading">
+              <p><%= "Exercise Name: #{workout_log.name}" %></p>
+              <p><%= "Reps: #{workout_log.reps}" %></p>
+              <p><%= "Sets: #{workout_log.sets}" %></p>
+              <p><%= "Weight: #{workout_log.weight}" %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
