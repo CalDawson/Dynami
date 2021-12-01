@@ -2,6 +2,7 @@
 
 <%= simple_form_for([@source, @post]) do |f| %>
 <%= f.input :caption, label: 'Write a caption for your post!'%>
+<%= f.input :photo, as: :file %>
 <div class="form-actions">
     <%= f.button :submit, { class: 'btn btn-primary' } %>
   </div>
