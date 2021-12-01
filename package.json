@@ -13,6 +13,7 @@
   },
   "version": "0.1.0",
   "devDependencies": {
+    "autoprefixer": "^10.4.0",
     "webpack-dev-server": "^4.6.0"
   }
 }
