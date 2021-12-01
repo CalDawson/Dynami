@@ -2,7 +2,7 @@
 
 <%= render "post", post: @post %>
   <% @post.comments.each do |comment| %>
-  <p><%= comment.user.email %></p>
+  <p><%= comment.user.username %></p>
   <span><%= comment.content %></span>
   <% end %>
 
