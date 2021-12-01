@@ -4,3 +4,4 @@
 <h3><%= "Workout Type: #{@session.workout.workout_type}" %></h3>
 
 <%= render "shared/exercises", exercises: @session.workout.workout_exercises %>
+<%= link_to 'Back', workout_sessions_path %>
