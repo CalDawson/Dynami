@@ -1,4 +1,4 @@
-<h1><%= @chatroom.users.find { |user| user != current_user}.email %></h1>
+<h1><%= @chatroom.users.find { |user| user != current_user}.username %></h1>
 <div id="messages" data-chatroom-id="<%= @chatroom.id %>">
   <% @chatroom.messages.each do |message| %>
     <%= render "messages/message", message: message %>
