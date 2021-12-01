@@ -1,4 +1,4 @@
-class PostPolicy < ApplicationPolicy
+class CommentPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.all
@@ -9,7 +9,7 @@ class PostPolicy < ApplicationPolicy
     true
   end
 
-  def show?
-    true
+  def destroy?
+    record.user == user || record.post.user == user
   end
 end

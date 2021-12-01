@@ -1,0 +1,14 @@
+<h2>show page</h2>
+
+<%= render "post", post: @post %>
+  <% @post.comments.each do |comment| %>
+  <p><%= comment.user.email %></p>
+  <span><%= comment.content %></span>
+  <% end %>
+
+<%= simple_form_for([@post, @comment]) do |f| %>
+<%= f.input :content, label: 'Leave a comment...'%>
+<div class="form-actions">
+    <%= f.button :submit, { class: 'btn btn-primary' } %>
+  </div>
+<% end %>

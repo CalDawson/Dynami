@@ -1,0 +1,10 @@
+<h2>new post method</h2>
+
+<%= simple_form_for([@source, @post]) do |f| %>
+<%= f.input :caption, label: 'Write a caption for your post!'%>
+<div class="form-actions">
+    <%= f.button :submit, { class: 'btn btn-primary' } %>
+  </div>
+<% end %>
+
+<%= link_to "I don't want to share", @path %>
