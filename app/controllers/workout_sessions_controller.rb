@@ -21,7 +21,7 @@ class WorkoutSessionsController < ApplicationController
   @session = WorkoutSession.new(workout_params)
   @session.user = current_user
     if @session.save
-      redirect_to workout_session_path(@session)
+      redirect_to new_workout_session_post_path(@session)
     else
       render :new
     end
