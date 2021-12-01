@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'posts#index'
+  root to: 'pages#home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :meal_eatens, only: %i[index destroy edit update new create]
   resources :meals, only: %i[new create destroy edit update index] do
@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   resources :workout_exercises, only: %i[edit update destroy]
 
-  resources :posts, only: %i[create show new destroy]
+  resources :posts, only: %i[create show new destroy index]
 
   resources :comments, only: %i[create destroy]
 
