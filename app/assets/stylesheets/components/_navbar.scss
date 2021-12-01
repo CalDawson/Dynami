@@ -17,8 +17,14 @@ h3 {
   padding: 1rem;
 }
 
+h4 {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
 .logo {
-  color: black!important;
+  color: black;
   font-weight: bold;
 }
 
