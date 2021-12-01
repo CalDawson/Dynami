@@ -16,11 +16,12 @@ class WorkoutSessionsController < ApplicationController
   end
 
   def create
+  @workout = Workout.new
   authorize WorkoutSession
-  session = WorkoutSession.new(workout_params)
-  session.user = current_user
-    if session.save
-      redirect_to workout_session(session)
+  @session = WorkoutSession.new(workout_params)
+  @session.user = current_user
+    if @session.save
+      redirect_to workout_session_path(@session)
     else
       render :new
     end
@@ -28,8 +29,8 @@ class WorkoutSessionsController < ApplicationController
 
   private
 
-  def workout_parms
-    params.require(:session).permit(:time)
+  def workout_params
+    params.require(:workout_session).permit(:time, :workout_id)
   end
 
 
