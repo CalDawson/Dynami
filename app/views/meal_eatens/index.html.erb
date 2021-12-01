@@ -1,0 +1,12 @@
+<h2>Meal_eaten index page</h2>
+
+<% @meal_eatens.each do |meal| %>
+
+<div class="card-container">
+  <div class="card">
+        <div class="card-heading">
+          <h2 class="heading"><%= meal.meal.name %></h2>
+        </div>
+    </div>
+</div>
+<% end %>
