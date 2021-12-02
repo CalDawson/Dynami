@@ -24,7 +24,7 @@ class PostsController < ApplicationController
       if params[:workout_session_id].present?
         redirect_to workout_session_path(params[:workout_session_id])
       else
-        redirect_to meal_eaten_path(params[:meal_eaten_id])
+        redirect_to meal_eatens_path
       end
     elsif params[:workout_session_id].present?
       redirect_to new_workout_session_post_path(params[:workout_session_id])
