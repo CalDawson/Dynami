@@ -1,0 +1,16 @@
+<% foods.each do |food|  %>
+  <div class="card-container">
+    <div class="card">
+      <div>
+          <div class="card-heading">
+              <p><%= "Name: #{food.name}" %></p>
+              <p><%= "Carbs: #{food.carbs}" %></p>
+              <p><%= "Proteins: #{food.protein}" %></p>
+              <p><%= "Fats: #{food.fats}" %></p>
+              <p><%= "Calories: #{food.calories}" %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
