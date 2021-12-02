@@ -1,13 +1,13 @@
 class WorkoutsController < ApplicationController
-
   def create
-  authorize Workout
-  workout = Workout.new(workout_params)
-  workout.user = current_user
-    if workout.save
-      redirect_to new_workout_workout_exercise_path(workout)
+    authorize Workout
+    @workout = Workout.new(workout_params)
+    @workout.user = current_user
+    @session = WorkoutSession.new
+    if @workout.save
+      redirect_to new_workout_workout_exercise_path(@workout)
     else
-      render :new
+      render new_workout_session_path
     end
   end
 
