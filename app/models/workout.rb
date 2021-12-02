@@ -2,4 +2,7 @@ class Workout < ApplicationRecord
   belongs_to :user
   has_many :workout_exercises
   has_many :exercises, through: :workout_exercises
+
+  validates :name, presence: true
+  validates :workout_type, presence: true
 end
