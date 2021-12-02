@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resources :posts, only: %i[new create]
   end
   resources :meals, only: %i[new create destroy edit update index] do
-    resources :meal_contents, only: %i[new create destroy]
+    resources :foods, only: %i[new create destroy]
   end
 
   resources :workout_sessions, only: %i[index destroy edit update new create show] do
