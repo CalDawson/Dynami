@@ -7,11 +7,8 @@ class FoodPolicy < ApplicationPolicy
   def create?
     return true
   end
-  def update?
-    record.user == user
-  end
 
   def destroy?
-    record.user == user
+    record.meal.user == user
   end
 end
