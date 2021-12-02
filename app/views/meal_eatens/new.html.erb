@@ -1,0 +1,16 @@
+<h2>Log a New Food</h2>
+
+<div class="container">
+  <%= simple_form_for(@meal_eaten) do |f| %>
+    <%= f.association :meal, prompt: 'Select a meal'%>
+    <%= f.input :meal_type, prompt: "What type of meal is this?" %>
+    <%= f.submit value: 'Add this meal!', class:'btn btn-primary' %>
+  <% end %>
+</div>
+
+<div class="container">
+  <%= simple_form_for(@meal) do |f| %>
+    <%= f.input :name %>
+    <%= f.submit value: 'Name this meal', class:'btn btn-primary' %>
+  <% end %>
+</div>
