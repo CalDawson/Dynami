@@ -11,6 +11,7 @@ class User < ApplicationRecord
   has_many :exercises
   has_many :chats1, class_name: "Chatroom", foreign_key: :user1_id
   has_many :chats2, class_name: "Chatroom", foreign_key: :user2_id
+  validates :username, presence: true
 
   def not_messaged
     messaged = chatrooms.map do |chat|
