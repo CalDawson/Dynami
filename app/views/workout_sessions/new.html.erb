@@ -5,7 +5,7 @@
 
 <div class="container">
   <%= simple_form_for(@session) do |f| %>
-    <%= f.association :workout, prompt: 'Select a list'%>
+    <%= f.association :workout, collection: current_user.workouts, prompt: 'Select a workout'%>
     <%= f.input :time %>
     <%= f.submit value: 'Create Workout Session', class:'btn btn-primary' %>
   <% end %>
