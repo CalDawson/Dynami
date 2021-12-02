@@ -6,12 +6,12 @@ class PostsController < ApplicationController
 
   def new
     if params[:workout_session_id].present?
-      @source = WorkoutSession.find(params[:workout_session_id])
-      @path = workout_session_path(@source)
-      else
-        @source = MealEaten.find(params[:meal_eaten_id])
-        @path = meal_eaten_path(@source)
-      end
+    @source = WorkoutSession.find(params[:workout_session_id])
+    @path = workout_session_path(@source)
+    else
+      @source = MealEaten.find(params[:meal_eaten_id])
+      @path = meal_eaten_path(@source)
+    end
     @post = Post.new
     authorize @post
   end
@@ -24,10 +24,12 @@ class PostsController < ApplicationController
       if params[:workout_session_id].present?
         redirect_to workout_session_path(params[:workout_session_id])
       else
-        #TODO Add meal_eaten show page path
+        redirect_to meal_eaten_path(params[:meal_eaten_id])
       end
+    elsif params[:workout_session_id].present?
+      redirect_to new_workout_session_post_path(params[:workout_session_id])
     else
-      render :new
+      redirect_to new_meal_eaten_post_path(params[:meal_eaten_id])
     end
   end
 
