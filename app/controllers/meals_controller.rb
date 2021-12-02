@@ -13,8 +13,21 @@ class MealsController < ApplicationController
   end
 
   def create
-    authorize Meal
-    meal = Meal.new
+      authorize Meal
+      @meal_eaten = MealEaten.new
+      @meal = Meal.new(meal_params)
+      @meal.user = current_user
+      if @meal.save
+        redirect_to meal_path(@meal)
+      else
+        render new_meal_eaten_path
+    end
+  end
+
+  def show
+    @food = Food.new
+    @meal = Meal.find(params[:id])
+    authorize @meal
   end
 
   private
@@ -23,13 +36,3 @@ class MealsController < ApplicationController
     params.require(:meal).permit(:name)
   end
 end
-
-  authorize Workout
-  workout = Workout.new(workout_params)
-  workout.user = current_user
-    if workout.save
-      redirect_to new_workout_workout_exercise_path(workout)
-    else
-      render :new
-    end
-  end
