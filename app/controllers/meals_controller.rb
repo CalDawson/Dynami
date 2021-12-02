@@ -6,14 +6,14 @@ class MealsController < ApplicationController
   end
 
   def create
-      authorize Meal
-      @meal_eaten = MealEaten.new
-      @meal = Meal.new(meal_params)
-      @meal.user = current_user
-      if @meal.save
-        redirect_to meal_path(@meal)
-      else
-        render new_meal_eaten_path
+    authorize Meal
+    @meal_eaten = MealEaten.new
+    @meal = Meal.new(meal_params)
+    @meal.user = current_user
+    if @meal.save
+      redirect_to meal_path(@meal)
+    else
+      render new_meal_eaten_path
     end
   end
 
