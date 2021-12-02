@@ -7,8 +7,10 @@ Rails.application.routes.draw do
   end
 
   resources :meals, only: %i[new create destroy edit update index show] do
-    resources :foods, only: %i[new create destroy]
+    resources :foods, only: %i[create]
   end
+
+  resources :foods, only: %i[destroy]
 
   resources :workout_sessions, only: %i[index destroy edit update new create show] do
     resources :posts, only: %i[new create]

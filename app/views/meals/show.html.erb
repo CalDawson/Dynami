@@ -3,7 +3,7 @@
 <%= render "shared/foods", foods: @meal.foods %>
 
 <div class="container">
-  <%= simple_form_for(@food) do |f| %>
+  <%= simple_form_for([@meal, @food]) do |f| %>
     <%= f.input :name %>
     <%= f.submit value: 'Search for a food', class:'btn btn-primary' %>
   <% end %>

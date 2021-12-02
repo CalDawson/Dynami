@@ -2,8 +2,9 @@
 
 <div class="container">
   <%= simple_form_for(@meal_eaten) do |f| %>
-    <%= f.association :meal, prompt: 'Select a meal'%>
+    <%= f.association :meal, collection: current_user.meals, prompt: 'Select a meal'%>
     <%= f.input :meal_type, prompt: "What type of meal is this?" %>
+    <%= f.input :date %>
     <%= f.submit value: 'Add this meal!', class:'btn btn-primary' %>
   <% end %>
 </div>
