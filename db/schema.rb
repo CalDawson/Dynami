@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_01_054657) do
+ActiveRecord::Schema.define(version: 2021_12_02_004919) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -63,15 +63,8 @@ ActiveRecord::Schema.define(version: 2021_12_01_054657) do
     t.integer "calories"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "meal_contents", force: :cascade do |t|
-    t.bigint "meal_id", null: false
-    t.bigint "food_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["food_id"], name: "index_meal_contents_on_food_id"
-    t.index ["meal_id"], name: "index_meal_contents_on_meal_id"
+    t.bigint "meal_id"
+    t.index ["meal_id"], name: "index_foods_on_meal_id"
   end
 
   create_table "meal_eatens", force: :cascade do |t|
@@ -171,8 +164,6 @@ ActiveRecord::Schema.define(version: 2021_12_01_054657) do
   add_foreign_key "chatrooms", "users", column: "user2_id"
   add_foreign_key "comments", "posts"
   add_foreign_key "comments", "users"
-  add_foreign_key "meal_contents", "foods"
-  add_foreign_key "meal_contents", "meals"
   add_foreign_key "meal_eatens", "meals"
   add_foreign_key "meal_eatens", "users"
   add_foreign_key "meals", "users"
