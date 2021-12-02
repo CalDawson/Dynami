@@ -1,7 +1,9 @@
+<div class="p-2 pl-4 bg-gray-200 m-1.5 ml-3">
 <div class="message-container" id="message-<%= message.id %>">
-  <i class="author">
+  <i class="author text-sm">
     <span><%= message.user.email %></span>
     <small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small>
   </i>
-  <p><%= message.content %></p>
+  <p class="text-lg"><%= message.content %></p>
+</div>
 </div>

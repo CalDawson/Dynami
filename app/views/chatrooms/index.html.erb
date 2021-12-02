@@ -1,9 +1,17 @@
-<h2>Chats</h2>
+<h2 class='ml-4'>Chats</h2>
 <% @chatrooms.each do |chatroom| %>
-  <%= link_to chatroom.users.find { |u| u != current_user}.username, chatroom_path(chatroom) %>
+  <%= link_to chatroom_path(chatroom) do %>
+  <div class="h-12 text-2xl p-2 pl-4 bg-gray-200 m-1.5 ml-3">
+    <p><%= chatroom.users.find { |u| u != current_user}.username %> </p>
+  </div>
+  <%end %>
 <%end %>
-<h2>Other members</h2>
+<h5 class='ml-4'>Other members</h5>
 <% @other_users.each do |user| %>
-  <%= link_to user.username, user_chatrooms_path(user), method: 'post' %>
+  <%= link_to user_chatrooms_path(user), method: 'post' do %>
+    <div class="h-12 text-xl p-2 pl-4 bg-gray-200 m-1.5 ml-3">
+      <p><%= user.username %> </p>
+    </div>
+  <%end %>
 <%end %>
 <%= link_to 'Back', root_path %>
