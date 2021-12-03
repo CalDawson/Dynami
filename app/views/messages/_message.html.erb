@@ -1,7 +1,7 @@
 <div class="p-2 pl-4 bg-white m-1.5 ml-3 rounded">
 <div class="message-container" id="message-<%= message.id %>">
   <i class="author text-sm">
-    <span><%= message.user.email %></span>
+    <span><%= message.user.username %></span>
     <small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small>
   </i>
   <p class="text-lg mb-0"><%= message.content %></p>
