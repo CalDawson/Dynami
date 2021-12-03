@@ -4,7 +4,9 @@
     <title>Dynami</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Genos:ital,wght@1,600&family=Merriweather&family=Roboto:wght@400;500&display=swap');
+    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -12,11 +14,13 @@
   </head>
 
   <body>
+  <%= render 'shared/header' %>
+    <%= render 'shared/flashes' %>
+    <div class="screen" >
+    <%= yield %>
+    </div>
   <% if user_signed_in?  %>
     <%= render 'shared/navbar' %>
   <% end %>
-    <%= render 'shared/flashes' %>
-
-    <%= yield %>
   </body>
 </html>

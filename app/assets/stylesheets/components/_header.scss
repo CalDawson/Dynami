@@ -1,0 +1,25 @@
+.header {
+  background-color: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.192);
+  height: 3.5rem;
+  justify-content: center;
+  position: fixed;
+  top: 0px!important;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.header h2 {
+  align-items: center;
+  text-align: center;
+  font-family: 'Genus';
+  font-weight: 600;
+  font-style: italic;
+  font-size: 1.5rem;
+}
+
+.screen {
+  margin-top: 3.5rem;
+}
