@@ -3,7 +3,7 @@
   <i class="fas fa-arrow-left"></i>
 <% end %>
 <h4 class='ml-4'><%= @chatroom.users.find { |user| user != current_user}.username %></h4>
-<div id="messages" data-chatroom-id="<%= @chatroom.id %>" style="height: 75vh; overflow: scroll;">
+<div id="messages" data-chatroom-id="<%= @chatroom.id %>" style="height: 70vh; overflow: scroll;">
   <% @chatroom.messages.each do |message| %>
     <%= render "messages/message", message: message %>
   <% end %>

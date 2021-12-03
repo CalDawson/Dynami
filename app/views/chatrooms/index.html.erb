@@ -1,7 +1,10 @@
-<h2 class='ml-4'>Chats</h2>
+<%= link_to root_path, class: 'btn-back' do %>
+  <i class="fas fa-arrow-left"></i>
+<% end %>
+<h3 class='ml-4'>Chats</h3>
 <% @chatrooms.each do |chatroom| %>
   <%= link_to chatroom_path(chatroom) do %>
-  <div class="h-12 text-2xl p-2 pl-4 bg-gray-200 m-1.5 ml-3">
+  <div class="chat-card">
     <p><%= chatroom.users.find { |u| u != current_user}.username %> </p>
   </div>
   <%end %>
@@ -9,9 +12,8 @@
 <h5 class='ml-4'>Other members</h5>
 <% @other_users.each do |user| %>
   <%= link_to user_chatrooms_path(user), method: 'post' do %>
-    <div class="h-12 text-xl p-2 pl-4 bg-gray-200 m-1.5 ml-3">
+    <div class="chat-card">
       <p><%= user.username %> </p>
     </div>
   <%end %>
 <%end %>
-<%= link_to 'Back', root_path %>
