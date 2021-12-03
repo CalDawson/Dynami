@@ -1,16 +1,20 @@
-<h1>Your Workouts</h1>
+<div class="wsheading">
+  <h1>Your Workouts</h1>
+</div>
 
 <% @workout_sessions.each do |workout_session| %>
 
-<div class="card-container">
-  <div class="card">
-        <div class="card-heading">
-          <h2 class="heading"><%="#{workout_session.workout.name}, #{workout_session.workout.workout_type}"  %></h2>
-          <%= link_to "details", workout_session_path(workout_session) %>
+<div class="ws-card-container">
+  <div class="ws-card">
+        <div class="ws-card-heading">
+          <h2 class="ws-heading"><%="#{workout_session.workout.name}" %></h2>
+          <i id="weight" class="fas fa-weight-hanging"></i>
+          <h3><%= "#{workout_session.workout.workout_type}" %></h3>
+          <p class="details"><%= link_to "details", workout_session_path(workout_session) %></p>
         </div>
     </div>
 </div>
 <% end %>
 
-<h2><%= link_to "Add A New Workout Session", new_workout_session_path %></h2>
+<h4 class="ws-new"><%= link_to "Add A New Workout Session", new_workout_session_path %></h4>
 <%= link_to 'Back', root_path %>
