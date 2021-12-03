@@ -20,6 +20,7 @@
 #weight {
   font-size: 50px;
   text-align: center;
+  padding: 0.5rem;
 }
 
 .ws-card {
@@ -34,10 +35,15 @@
   text-decoration: none;
   font-size: 25px;
   justify-content: center;
+  padding: 0.5rem;
 
 }
 
 .details {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 0.5rem;
 
 }
 
