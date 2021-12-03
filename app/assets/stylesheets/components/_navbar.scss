@@ -1,43 +1,26 @@
 .navbarheader {
   display: flex;
-  margin-top: 0;
-  list-style: none;
-  background-color: transparent;
   width: 100%;
-  background-color: rgba(0,0,0,0.1);
-  border-bottom: 1px solid rgba(255,255,255,0.2);
-  z-index: 1;
+  background-color: white;
+  border-top: 1px solid rgba(0, 0, 0, 0.192);
   height: 5.5rem;
   justify-content: center;
+  position: fixed;
+  bottom: 0px!important;
 }
 
-h3 {
-  display: flex;
-  align-items: center;
-  padding: 1rem;
-}
-
-h4 {
-  display: flex;
-  align-items: center;
-  padding: 1rem;
-}
-
-.logo {
-  color: black;
-  font-weight: bold;
+.screen {
+  margin-bottom: 5.5rem;
 }
 
 .nav {
-  padding-left: 110px;
-  padding-right: 110px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .link {
-  color: #E9724C!important;
+  color: black!important;
 }

@@ -1,6 +1,8 @@
 <div class="navbarheader">
-  <h3><%= link_to "Dynami", root_path, class: "logo" %></h3>
   <nav class="nav">
+  <%= link_to root_path, class: "link" do %>
+      <i class="fas fa-home"></i>
+    <% end %>
     <%= link_to workout_sessions_path, class: "link" do %>
       <i class="fas fa-dumbbell"></i>
     <% end %>
@@ -10,6 +12,8 @@
     <%= link_to chatrooms_path, class: "link" do %>
       <i class="fas fa-comments"></i>
     <% end %>
+    <%= link_to destroy_user_session_path, class: "link", method: :delete do %>
+      <i class="fas fa-sign-out-alt"></i>
+    <% end %>
   </nav>
-  <h4><%= link_to "Log Out", destroy_user_session_path, class: "logo", method: :delete  %></h4>
 </div>
