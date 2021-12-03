@@ -23,3 +23,16 @@
 .screen {
   margin-top: 3.5rem;
 }
+
+.btn-back {
+  position: fixed;
+  top: 8px!important;
+  z-index: 1;
+  font-size: 20px;
+  padding: 6px;
+  color: #000;
+  &:hover {
+    color: #000;
+    opacity: 0.6;
+  }
+}
