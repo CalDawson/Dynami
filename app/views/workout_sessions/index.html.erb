@@ -10,7 +10,7 @@
           <h2 class="ws-heading"><%="#{workout_session.workout.name}" %></h2>
           <i id="weight" class="fas fa-weight-hanging"></i>
           <h3><%= "#{workout_session.workout.workout_type}" %></h3>
-          <p class="details"><%= link_to "details", workout_session_path(workout_session) %></p>
+          <%= link_to "details", workout_session_path(workout_session), class: "details" %>
         </div>
     </div>
 </div>

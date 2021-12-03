@@ -8,10 +8,10 @@
               <p><%= "Proteins: #{food.protein}" %></p>
               <p><%= "Fats: #{food.fats}" %></p>
               <p><%= "Calories: #{food.calories}" %></p>
+              <p><%= link_to "Delete this food", food_path(food), method: :delete %></p>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <p><%= link_to "Delete this food", food_path(food), method: :delete %></p>
 <% end %>
