@@ -2,8 +2,10 @@
     <% @posts.each do |post| %>
     <div class = "postpage">
       <h2><%= post.user.username %></h2>
+      <%= link_to post_path(post) do %>
       <%= cl_image_tag post.photo.key, height: 300, width: 400, crop: :fill %>
-      <ul>
+      <% end %>
+      <ul class = "list-inline">
         <li>
           <div class="like_subscribe">
             <i class="far fa-heart"></i>
@@ -16,7 +18,6 @@
         </li>
       </ul>
       <p><%= post.caption %></p>
-      <p><%= link_to "View this post", post_path(post) %></p>
     </div>
     <% end %>
 </div>
