@@ -27,6 +27,7 @@ image5 = 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-1.2
   logo = URI.open(url)
   post = Post.new
   user = User.create!({ username: Faker::FunnyName.name, email: Faker::Internet.email, password: '123456', password_confirmation: '123456' })
+  post.user = user
   post.caption = Faker::GreekPhilosophers.quote
   post.photo.attach(io: logo, filename: "post.jpeg", content_type: 'image/jpeg')
   post.save!
