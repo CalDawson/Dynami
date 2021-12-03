@@ -1,6 +1,7 @@
 .wsheading {
   display: flex;
   justify-content: center;
+
 }
 
 .ws-card-container {
@@ -16,15 +17,23 @@
   margin-right: auto;
 }
 
+#weight {
+  font-size: 50px;
+  text-align: center;
+}
+
 .ws-card {
 
 }
 
 .ws-card-heading {
-
 }
 
 .ws-heading {
+  text-align: center;
+  text-decoration: none;
+  font-size: 25px;
+  justify-content: center;
 
 }
 
@@ -33,5 +42,8 @@
 }
 
 .ws-new {
-
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 90%;
+  padding-left: 3rem;
 }
