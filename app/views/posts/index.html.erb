@@ -1,8 +1,21 @@
-<div class = "container">
-<h1>Welcome To Dynami!</h1>
+<div>
     <% @posts.each do |post| %>
     <div class = "postpage">
-      <%= render "post", post: post %>
+      <h2><%= post.user.username %></h2>
+      <%= cl_image_tag post.photo.key, height: 300, width: 400, crop: :fill %>
+      <ul>
+        <li>
+          <div class="like_subscribe">
+            <i class="far fa-heart"></i>
+          </div>
+        </li>
+        <li>
+          <div class="comments">
+            <i class="far fa-comments"></i>
+          </div>
+        </li>
+      </ul>
+      <p><%= post.caption %></p>
       <p><%= link_to "View this post", post_path(post) %></p>
     </div>
     <% end %>
