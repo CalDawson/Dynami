@@ -50,9 +50,13 @@ body {
   padding-top: 24px;
 }
 
-// .like_subscribe {
-//   padding-left: 20px;
-// }
+.like_subscribe {
+  color: #ddd;
+}
+
+.like_subscribe.liked {
+  color: #f00;
+}
 
 // .comments {
 //   padding-left: 20px;

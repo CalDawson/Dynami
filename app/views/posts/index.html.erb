@@ -7,8 +7,8 @@
       <% end %>
       <ul class = "list-inline">
         <li>
-          <div class="like_subscribe">
-            <i class="far fa-heart"></i>
+          <div class="like_subscribe <%= "liked" if liked?(post) %>">
+            <i class="fas fa-heart"></i>
           </div>
         </li>
         <li>
