@@ -2,6 +2,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = policy_scope(Post)
+    @like = Like.new
   end
 
   def new
