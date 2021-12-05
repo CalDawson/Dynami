@@ -18,6 +18,14 @@
         </li>
       </ul>
       <p><%= post.caption %></p>
-    </div>
+    <% comment = post.comments.last %>
+    <% if comment %>
+      <p><%= comment.user.username %></p>
+      <span><%= comment.content %></span>
+    <% end  %>
+    <% if post.comments.count > 1 %>
+      <%= link_to "See more comments (#{post.comments.count - 1})", post_path(post) %>
     <% end %>
+    </div>
+  <% end %>
 </div>
