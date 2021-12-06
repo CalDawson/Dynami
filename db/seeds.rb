@@ -29,12 +29,12 @@ image3 = 'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-
 image4 = 'https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80'
 image5 = 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80'
 [image1, image2, image3, image4, image5].each do |url|
-  logo = URI.open(url)
-  post = Post.new
+  # logo = URI.open(url)
+  # post = Post.new
   user = User.create!({ avatar_url: "https://i.pravatar.cc/150?img=#{j}", username: Faker::FunnyName.name, email: Faker::Internet.email, password: '123456', password_confirmation: '123456' })
   j += 1
-  post.user = user
-  post.caption = Faker::GreekPhilosophers.quote
-  post.photo.attach(io: logo, filename: "post.jpeg", content_type: 'image/jpeg')
+  # post.user = user
+  # post.caption = Faker::GreekPhilosophers.quote
+  # post.photo.attach(io: logo, filename: "post.jpeg", content_type: 'image/jpeg')
   post.save!
 end

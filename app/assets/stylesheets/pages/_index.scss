@@ -3,6 +3,9 @@
 @import "meal_eatens_index";
 
 
+.card_container {
+  width: 65%;
+}
 .index-page-container {
   margin-top: -50px;
   // z-index: 1;
@@ -18,7 +21,7 @@
   border-radius: 16px;
   margin-bottom: 16px;
   background-color: white;
-  // margin-top:  300px;
+  margin-top: 12px;
 }
 
 .h2_new {
@@ -78,7 +81,7 @@ padding-bottom: 8px;
 }
 
 .bookmark_icon {
-  margin-left: 400px;
+
 }
 
 .user_caption{

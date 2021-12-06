@@ -1,4 +1,6 @@
-    <% @posts.each do |post| %>
+<div class= "card-container">
+  <% @posts.each do |post| %>
+  <div class>
     <div class = "postpage">
       <h2 class="h2_new"><%= post.user.username%></h2>
       <%= link_to post_path(post) do %>
@@ -37,7 +39,7 @@
         <strong><p><%= post.user.username %> - </strong><%= post.caption %></p>
       </div>
       <div class = "new_comments">
-        <% comment = post.comments.last %>
+        <% comment = post.comments.last %> 
         <% if comment %>
           <strong><p><%= comment.user.username %></p></strong>
           <div class= "post_comments">
@@ -50,4 +52,6 @@
           </div>
         <% end %>
     </div>
+  </div>
   <% end %>
+</div>
