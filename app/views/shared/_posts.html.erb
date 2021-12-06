@@ -1,5 +1,6 @@
+<div class= "card-container">
   <% @posts.each do |post| %>
-  <div>
+  <div class>
     <div class = "postpage">
       <h2 class="h2_new"><%= post.user.username%></h2>
       <%= link_to post_path(post) do %>
@@ -53,3 +54,4 @@
     </div>
   </div>
   <% end %>
+</div>
