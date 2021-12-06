@@ -22,6 +22,13 @@ class MealEatensController < ApplicationController
     end
   end
 
+  def destroy
+    meal = MealEaten.find(params[:id])
+    authorize meal
+    meal.destroy
+    redirect_to meal_eatens_path
+  end
+
   private
 
   def meal_eaten_params
