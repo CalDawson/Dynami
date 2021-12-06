@@ -1,14 +1,28 @@
 .chat-card {
   height: 50px;
-  margin: 8px;
   background-color: #fff;
   color: #000;
   border-radius: 4px;
-  p {
-    padding-top: 8px;
-    font-size: 24px;
-  }
+  padding-left: 12px;
+  padding-right: 12px;
   &:hover {
     opacity : 0.6;
+  }
+}
+
+.chat-user {
+  height: 50px;
+  display: flex;
+  border-bottom: 1px solid rgba(100,100,100,0.3);
+  align-items: center;
+  text-align: left;
+  p {
+    font-size: 24px;
+    flex-grow: 1;
+    margin-bottom: 0;
+    padding-left: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 }
