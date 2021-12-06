@@ -3,26 +3,33 @@
 @import "meal_eatens_index";
 
 
-.card_container {
-  width: 65%;
-}
 .index-page-container {
   margin-top: -50px;
   // z-index: 1;
   max-width: 90%;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
 }
-.postpage {
-  max-width: 500px;
-  display: block;
+
+.card-container {
+  margin-bottom: 15px;
+  width: 100%;
   margin-left: auto;
-  // width: 85%;
+  margin-right: auto;
+  // box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+
+.postpage {
+  // max-width: 500px;
+  display: block;
+  margin: auto;
+  width: 85%;
   border-radius: 16px;
   margin-bottom: 16px;
   background-color: white;
-  margin-top: 12px;
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
 .h2_new {
@@ -95,4 +102,8 @@ padding-bottom: 8px;
 }
 .new_comments {
 
+}
+
+.card-col {
+  width: 65%;
 }
