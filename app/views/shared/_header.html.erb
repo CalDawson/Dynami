@@ -1,3 +1,39 @@
-<div class="header">
-  <h2>Dynami</h2>
-</div>
+<nav>
+  <div class="logo">
+    <h4>DYNAMI</h4>
+  </div>
+      <ul class="nav-links">
+        <li>
+          <%= current_user.username %>
+        </li>
+        <li>
+          <%= link_to "Home", root_path%>
+        </li>
+        <li >
+          <%= link_to workout_sessions_path, class: "link" do %>
+            <i class="fas fa-dumbbell"></i>
+          <% end %>
+        </li>
+        <li >
+          <%= link_to meal_eatens_path, class: "link" do %>
+            <i class="fas fa-utensils"></i>
+          <% end %>
+        </li>
+        <li >
+          <%= link_to chatrooms_path, class: "link" do %>
+            <i class="fas fa-comments"></i>
+          <% end %>
+        </li>
+        <li >
+          <%= link_to destroy_user_session_path, class: "link", method: :delete do %>
+            <i class="fas fa-sign-out-alt"></i>
+          <% end %>
+        </li>
+      </ul>
+
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+</nav>
