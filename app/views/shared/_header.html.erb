@@ -3,34 +3,46 @@
     <h4>DYNAMI</h4>
   </div>
       <ul class="nav-links">
-        <li>
-          <%= current_user.username %>
-        </li>
-        <li>
-          <%= link_to "Home", root_path%>
-        </li>
-        <li >
-          <%= link_to workout_sessions_path, class: "link" do %>
-            <i class="fas fa-dumbbell"></i>
-          <% end %>
-        </li>
-        <li >
-          <%= link_to meal_eatens_path, class: "link" do %>
-            <i class="fas fa-utensils"></i>
-          <% end %>
-        </li>
-        <li >
-          <%= link_to chatrooms_path, class: "link" do %>
-            <i class="fas fa-comments"></i>
-          <% end %>
-        </li>
-        <li >
-          <%= link_to destroy_user_session_path, class: "link", method: :delete do %>
-            <i class="fas fa-sign-out-alt"></i>
-          <% end %>
-        </li>
+        <div class="link-container">
+          <li>
+            <%= link_to root_path, class: "link" do %>
+              <i class="fas fa-home"></i>
+            <% end %>
+          </li>
+        </div>
+
+        <div class="link-container">
+          <li >
+            <%= link_to workout_sessions_path, class: "link" do %>
+              <i class="fas fa-dumbbell"></i>
+            <% end %>
+          </li>
+        </div>
+
+        <div class="link-container">
+          <li >
+            <%= link_to meal_eatens_path, class: "link" do %>
+              <i class="fas fa-utensils"></i>
+            <% end %>
+          </li>
+        </div>
+
+        <div class="link-container">
+          <li >
+            <%= link_to chatrooms_path, class: "link" do %>
+              <i class="fas fa-comments"></i>
+            <% end %>
+          </li>
+        </div>
       </ul>
 
+      <div class="log-out">
+        <li >
+          <%= link_to destroy_user_session_path, class: "link", method: :delete do %>
+            <i id="log-out-icon" class="fas fa-sign-out-alt"></i>
+          <% end %>
+        </li>
+      </div>
       <div class="burger">
         <div class="line1"></div>
         <div class="line2"></div>
