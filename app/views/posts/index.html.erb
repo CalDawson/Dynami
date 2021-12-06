@@ -17,6 +17,12 @@
           </div>
         </li>
       </ul>
+      <div class="likedby">
+          <% if post.likes.count >= 1  %>
+      <p>Liked by <%= pluralize post.likes.count, "person" %></p>
+      <% end %>
+      </div>
+
       <p><%= post.caption %></p>
     <% comment = post.comments.last %>
     <% if comment %>
