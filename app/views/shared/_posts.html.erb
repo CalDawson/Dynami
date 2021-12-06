@@ -4,7 +4,7 @@
     <div class = "postpage">
       <h2 class="h2_new"><%= post.user.username%></h2>
       <%= link_to post_path(post) do %>
-      <%= cl_image_tag post.photo.key, height: 300, width: 400, crop: :fill, class:"post_page_card_image" %>
+        <%= cl_image_tag post.photo.key, height: 300, width: 400, crop: :fill, class:"post_page_card_image" %>
       <% end %>
       <ul class = "list-inline">
         <li>
@@ -30,7 +30,7 @@
       </ul>
       <div class="likedby">
         <% if post.likes.count >= 1  %>
-        <p><%= pluralize post.likes.count, "like" %></p>
+          <p><%= pluralize post.likes.count, "like" %></p>
         <% end %>
       </div>
 
@@ -39,18 +39,18 @@
         <strong><p><%= post.user.username %> - </strong><%= post.caption %></p>
       </div>
       <div class = "new_comments">
-        <% comment = post.comments.last %>
-          <% if comment %>
-            <strong><p><%= comment.user.username %></p></strong>
-            <div class= "post_comments">
+        <% comment = post.comments.last %> 
+        <% if comment %>
+          <strong><p><%= comment.user.username %></p></strong>
+          <div class= "post_comments">
             <span><%= comment.content %></span>
-          <% end  %>
-      </div>
-      <div class= "post_comments">
+          </div>
+        <% end  %>
         <% if post.comments.count > 1 %>
-          <%= link_to "See more comments (#{post.comments.count - 1})", post_path(post) %>
+          <div class= "post_comments">
+            <%= link_to "See more comments (#{post.comments.count - 1})", post_path(post) %>
+          </div>
         <% end %>
-      </div>
     </div>
   </div>
   <% end %>

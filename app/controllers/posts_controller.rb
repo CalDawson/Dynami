@@ -3,6 +3,8 @@ class PostsController < ApplicationController
   def index
     @posts = policy_scope(Post)
     @like = Like.new
+    @chatrooms = policy_scope(Chatroom)
+    @other_users = current_user.not_messaged
   end
 
   def new
