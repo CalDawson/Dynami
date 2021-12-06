@@ -2,18 +2,7 @@
   <i class="fas fa-arrow-left"></i>
 <% end %>
 <h3 class='ml-4'>Chats</h3>
-<% @chatrooms.each do |chatroom| %>
-  <%= link_to chatroom_path(chatroom) do %>
-  <div class="chat-card">
-    <p><%= chatroom.users.find { |u| u != current_user}.username %> </p>
-  </div>
-  <%end %>
-<%end %>
+<%= render "shared/chats", chatrooms: @chatrooms %>
+
 <h5 class='ml-4'>Other members</h5>
-<% @other_users.each do |user| %>
-  <%= link_to user_chatrooms_path(user), method: 'post' do %>
-    <div class="chat-card">
-      <p><%= user.username %> </p>
-    </div>
-  <%end %>
-<%end %>
+<%= render "shared/users", users: @other_users %>

@@ -1,0 +1,10 @@
+<% @other_users.each do |user| %>
+  <%= link_to user_chatrooms_path(user), method: 'post' do %>
+    <div class="chat-card">
+      <div class="chat-user">
+        <img class="h-8 w-8 rounded-full" src=<%= user.avatar_url %> alt="">
+        <p><%= user.username %> </p>
+      </div>
+    </div>
+  <%end %>
+<%end %>
