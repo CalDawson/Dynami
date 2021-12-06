@@ -1,7 +1,7 @@
 <div class="index-page-container">
     <% @posts.each do |post| %>
     <div class = "postpage">
-      <h2><%= post.user.username %></h2>
+      <h2 class="h2_new"><%= post.user.username%></h2>
       <%= link_to post_path(post) do %>
       <%= cl_image_tag post.photo.key, height: 300, width: 400, crop: :fill, class:"post_page_card_image" %>
       <% end %>
@@ -37,7 +37,7 @@
       <div class= "user_caption">
         <strong><p><%= post.user.username %> - </strong><%= post.caption %></p>
       </div>
-
+    <div class = "new_comments">
     <% comment = post.comments.last %>
     <% if comment %>
       <strong><p><%= comment.user.username %></p></strong>
