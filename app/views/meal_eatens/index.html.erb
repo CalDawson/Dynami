@@ -20,12 +20,15 @@
                 </div>
                 <h2 class="heading"><%= meal.meal.name %></h2>
               </div>
-              <div>
+              <div class= "info">
                 <p class="information" ><b>Total Carbs: </b><span><%= meal.meal.total_carbs %></span></p>
                 <p class="information" ><b>Total Protein: </b><span><%= meal.meal.total_proteins %></span></p>
                 <p class="information" ><b>Total Fats: </b><span><%= meal.meal.total_fats %></span></p>
                 <p class="information" ><b>Total Calories: </b><span><%= meal.meal.total_calories %></span></p>
               </div>
+            </div>
+            <div>
+                <%= link_to "details", root_path, class: "details" %>
             </div>
             <%# <div class="ed-buttons">
             <p class="edit-btn">Edit</p>

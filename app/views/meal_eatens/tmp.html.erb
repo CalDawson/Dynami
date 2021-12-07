@@ -1,0 +1,29 @@
+<%# this one %>
+
+<%= link_to root_path, class: "btn-back" do %>
+<i class="fas fa-arrow-left"></i>
+
+<div class="wsheading">
+  <h2>Your Workouts</h2>
+</div>
+
+<% @workout_sessions.each do |workout_session| %>
+
+<div class="ws-card-container">
+  <div class="ws-card">
+        <div class="ws-card-heading">
+          <%= link_to workout_session_path(workout_session), method: :delete do %>
+            <i class="far fa-trash-alt"></i>
+          <% end %>
+          <h2 class="ws-heading"><%="#{workout_session.workout.name}" %></h2>
+          <i id="weight" class="fas fa-weight-hanging"></i>
+          <h3><%= "#{workout_session.workout.workout_type}" %></h3>
+          <%= link_to "details", workout_session_path(workout_session), class: "details" %>
+        </div>
+    </div>
+</div>
+<% end %>
+
+<% end %>
+
+<h4 class="ws-new"><%= link_to "Add A New Workout Session", new_workout_session_path %></h4>
