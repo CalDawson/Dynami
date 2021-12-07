@@ -1,5 +1,5 @@
 .chat-card {
-  height: 50px;
+  min-height: 50px;
   background-color: #fff;
   color: #000;
   border-radius: 4px;
@@ -11,9 +11,8 @@
 }
 
 .chat-user {
-  height: 50px;
+  min-height: 50px;
   display: flex;
-  border-bottom: 1px solid rgba(100,100,100,0.3);
   align-items: center;
   text-align: left;
   p {
