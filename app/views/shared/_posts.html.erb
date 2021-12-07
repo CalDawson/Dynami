@@ -28,29 +28,32 @@
           </div>
         </li>
       </ul>
-      <div class="likedby">
-        <% if post.likes.count >= 1  %>
-          <p><%= pluralize post.likes.count, "like" %></p>
-        <% end %>
-      </div>
+
+    <div class="bottom_half">
+        <div class="likedby">
+          <% if post.likes.count >= 1  %>
+            <p><%= pluralize post.likes.count, "like" %></p>
+          <% end %>
+        </div>
 
 
-      <div class= "user_caption">
-        <strong><p><%= post.user.username %> - </strong><%= post.caption %></p>
+        <div class= "user_caption">
+          <strong><p><%= post.user.username %> - </strong><%= post.caption %></p>
+        </div>
+        <div class = "new_comments">
+          <% comment = post.comments.last %>
+          <% if comment %>
+            <div class= "post_comments">
+              <strong><p><%= comment.user.username %></strong> <span><%= comment.content %></span></p>
+            </div>
+          <% end  %>
+          <% if post.comments.count > 1 %>
+            <div class= "post_comments">
+              <%= link_to "See more comments (#{post.comments.count - 1})", post_path(post) %>
+            </div>
+          <% end %>
+        </div>
       </div>
-      <div class = "new_comments">
-        <% comment = post.comments.last %>
-        <% if comment %>
-          <strong><p><%= comment.user.username %></p></strong>
-          <div class= "post_comments">
-            <span><%= comment.content %></span>
-          </div>
-        <% end  %>
-        <% if post.comments.count > 1 %>
-          <div class= "post_comments">
-            <%= link_to "See more comments (#{post.comments.count - 1})", post_path(post) %>
-          </div>
-        <% end %>
     </div>
   </div>
   <% end %>
