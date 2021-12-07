@@ -35,9 +35,10 @@ nav {
   justify-content: space-around;
   list-style: none;
   align-items: center;
-  min-width: 800px;
+  max-width: 60%;
   margin-left: auto;
   margin-right: auto;
+  flex-grow: 1;
 }
 
 .nav-links a {
@@ -79,7 +80,7 @@ nav {
     position: absolute;
     right: 0px;
     height: 92vh;
-    top: 8vh;
+    top: 6.9vh;
     background-color: #753fee;
     display: flex;
     flex-direction: column;

@@ -1,7 +1,44 @@
 <div class="hero_banner">
   <div class="title">
     <h2>Welcome <%= current_user.username %></h2>
+    <h4>Here's How You're Going Today...</h4>
+  </div>
+  <div class="nutrition-cards">
+    <div class="n-card">
+      <%= render "shared/progress", classes: "banner_progress", progress: 40 %>
+      <div class="n-card-heading">
+      <%# <i class="fas fa-bread-slice"></i> %>
+      <h4>Carbohydrates</h4>
+      <p><%= current_user.days_carbs %><span>g.</span></p>
+      </div>
+    </div>
+
+    <div class="n-card">
+      <%= render "shared/progress", classes: "banner_progress", progress: 40 %>
+      <div class="n-card-heading">
+      <%# <i class="fas fa-bread-slice"></i> %>
+      <h4>Fats</h4>
+      <p><%= current_user.days_fats %><span>g.</span></p>
+      </div>
+    </div>
+
+    <div class="n-card">
+      <%= render "shared/progress", classes: "banner_progress", progress: 40 %>
+      <div class="n-card-heading">
+      <%# <i class="fas fa-bread-slice"></i> %>
+      <h4>Proteins</h4>
+      <p><%= current_user.days_protiens %><span>g.</span></p>
+      </div>
+    </div>
+
+    <div class="n-card">
+      <%= render "shared/progress", classes: "banner_progress", progress: 40 %>
+      <div class="n-card-heading">
+      <%# <i class="fas fa-bread-slice"></i> %>
+      <h4>Calories</h4>
+      <p><%= current_user.days_calories %></p>
+      </div>
+    </div>
     <%# <%= render "posts/circles", progress: 40  %>
   </div>
-
 </div>

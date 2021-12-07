@@ -2,16 +2,18 @@
 <%= link_to chatrooms_path, class: 'btn-back' do %>
   <i class="fas fa-arrow-left"></i>
 <% end %>
-<h4 class='ml-4'><%= @chatroom.users.find { |user| user != current_user}.username %></h4>
-<div id="messages" data-chatroom-id="<%= @chatroom.id %>" style="height: 70vh; overflow: scroll;">
-  <% @chatroom.messages.each do |message| %>
-    <%= render "messages/message", message: message %>
+<div class="chatroom-container">
+  <h4 class='chat-username'><%= @chatroom.users.find { |user| user != current_user}.username %></h4>
+    <div id="messages" data-chatroom-id="<%= @chatroom.id %>" style="height: 70vh; overflow: scroll;">
+      <% @chatroom.messages.each do |message| %>
+        <%= render "messages/message", message: message %>
+      <% end %>
+    </div>
+
+  <%= simple_form_for [ @chatroom, @message ], remote: true do |f| %>
+    <div class="d-flex align-items-center">
+      <%= f.input :content, wrapper_html: { class: "flex-grow-1 p-2 mb-0" }, label: false, placeholder: "New Message" %>
+      <%= f.submit value: 'Send', class: "btn btn-success mr-2", id: "send-btn" %>
+    </div>
   <% end %>
 </div>
-
-<%= simple_form_for [ @chatroom, @message ], remote: true do |f| %>
-<div class="d-flex align-items-center">
-  <%= f.input :content, wrapper_html: { class: "flex-grow-1 p-2 mb-0" }, label: false, placeholder: "New Message" %>
-  <%= f.submit value: 'Send', class: "btn btn-success mr-2" %>
-</div>
-<% end %>
