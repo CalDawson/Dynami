@@ -1,21 +1,85 @@
 .hero_banner {
-  background: rgb(2,0,36);
-  background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 31%, rgba(0,0,0,0.7511379551820728) 100%);
+  // background: rgb(2,0,36);
+  // background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 31%, rgba(0,0,0,0.7511379551820728) 100%);
   min-height: 40vh;
   width: 100%!important;
+  background-color: #C4FCEF;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.title {
+  max-width: 90%;
+  margin: auto;
 }
 
 .title h2 {
   padding-top: 45px;
-  margin-left: 100px;
-  color:white!important;
+  color:black;
   font-family: 'Poppins', sans-serif!important;
   text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
   font-size: 45px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
-.fill-current {
+.title h4 {
+  font-family: "Poppins", sans-serif !important;
+  color: black;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
 
- }
+.nutrition-cards {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0px 22px 20px -25px rgba(0, 0, 0, 0.1);
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
+
+.n-card {
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.n-card-heading {
+  font-family: 'Poppins', sans-serif!important;
+  font-size: 25px;
+}
+
+.n-card-heading h4 {
+  font-family: "Poppins", sans-serif !important;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+.n-card-heading p {
+  font-family: 'Poppins', sans-serif!important;
+  font-size: 35px;
+  margin: auto;
+}
+
+.n-card-heading i {
+  font-size: 50px;
+  text-align: center;
+}
+
+.banner_progress {
+  color: black;
+  // background-color: gray;
+  width: 50px;
+  margin-right: 10px;
+}
 // fill: currentColor;
 // stroke: currentColor
