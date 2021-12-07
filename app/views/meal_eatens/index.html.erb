@@ -14,8 +14,8 @@
               <div>
                 <div class="top-line">
                   <h4 class="meal-type"><%= meal.meal_type %></h4>
-                  <%= link_to root_path do %>
-                    <i class="fas fa-trash"></i>
+                  <%= link_to meal_eaten_path(meal.id), method: :delete do %>
+                    <i class="far fa-trash-alt"></i>
                   <% end %>
                 </div>
                 <h2 class="heading"><%= meal.meal.name %></h2>
