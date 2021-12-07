@@ -1,11 +1,6 @@
-<%= link_to root_path, class: "btn-back" do %>
+<%= link_to workout_sessions_path, class: "btn-back" do %>
 <i class="fas fa-arrow-left"></i>
 <% end %>
-<div class="wsheading">
-  <h2><%= "#{@session.workout.name}" %></h2>
+<div class = "workout-container">
+  <%= render "shared/exercises", exercises: @session.workout.workout_exercises, class: "ex-card-body"%>
 </div>
-<div class = ""></div>
-<h3><%= "Workout Type: #{@session.workout.workout_type}" %></h3>
-
-<%= render "shared/exercises", exercises: @session.workout.workout_exercises %>
-<%= link_to 'Back', workout_sessions_path %>

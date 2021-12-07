@@ -1,0 +1,54 @@
+.ex-card {
+  // border: 1px solid blueviolet;
+  background-color: white;
+  border-radius: 24px;
+  width: 50%;
+  padding: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;x-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  justify-content: center;
+  text-align: center;
+  margin-top: 24px;
+}
+.ex-card-body {
+  // width: 50%;
+  // padding: 15px;
+}
+
+.exercise_name {
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.exercise_inline {
+  display: inline-block;
+  margin-bottom: auto;
+  padding-left: 16px;
+}
+
+.reps {
+  margin-bottom: 8px;
+}
+.sets {
+  margin-bottom: 8px;
+}
+.weight {
+  margin-bottom: 8px;
+}
+
+.workout-container{
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.exercise_card_heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  // min-height: 220px;
+  margin-top: 16px;
+}

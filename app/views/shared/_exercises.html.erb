@@ -1,15 +1,19 @@
-<% exercises.each do |workout_log|  %>
-  <div class="card-container">
-    <div class="card">
+<div class="ex-card">
+  <div class="wsheading">
+    <h2><%= "#{@session.workout.name}" %>  -  <%= "#{@session.workout.workout_type}" %></h2>
+  </div>
+  <% exercises.each do |workout_log|  %>
+    <div class="ex-card-body">
       <div>
-          <div class="card-heading">
-              <p><%= "Exercise Name: #{workout_log.name}" %></p>
-              <p><%= "Reps: #{workout_log.reps}" %></p>
-              <p><%= "Sets: #{workout_log.sets}" %></p>
-              <p><%= "Weight: #{workout_log.weight}" %></p>
-          </div>
+        <div class="exercise_card_heading">
+            <p class = "exercise_name"><%= "Exercise Name: #{workout_log.name}" %></p>
+            <div class = "exercise_inline">
+              <p class= "reps"><%= "Reps: #{workout_log.reps}" %></p>
+              <p class= "sets"><%= "Sets: #{workout_log.sets}" %></p>
+              <p class= "weight"><%= "Weight: #{workout_log.weight}" %></p>
+            </div>
         </div>
       </div>
     </div>
-  </div>
-<% end %>
+  <% end %>
+</div>
