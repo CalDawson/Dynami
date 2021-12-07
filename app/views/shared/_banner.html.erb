@@ -2,6 +2,9 @@
   <div class="title">
     <h2>Welcome <%= current_user.username %></h2>
     <%# <%= render "posts/circles", progress: 40  %>
+    <p>carbs: <%= current_user.days_carbs %></p>
+    <p>protien: <%= current_user.days_protiens %></p>
+    <p>fats: <%= current_user.days_fats %></p>
+    <p>calories: <%= current_user.days_calories %></p>
   </div>
-
 </div>

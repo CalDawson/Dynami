@@ -13,14 +13,14 @@ class Meal < ApplicationRecord
   end
 
   def total_proteins
-  total = 0
+    total = 0
     foods.each do |food|
       total += food.protein
     end
     total
   end
 
-    def total_fats
+  def total_fats
     total = 0
     foods.each do |food|
       total += food.fats
@@ -28,7 +28,7 @@ class Meal < ApplicationRecord
     total
   end
 
-    def total_calories
+  def total_calories
     total = 0
     foods.each do |food|
       total += food.calories

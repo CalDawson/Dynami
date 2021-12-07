@@ -1,3 +1,5 @@
+require 'date'
+
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
@@ -23,5 +25,33 @@ class User < ApplicationRecord
 
   def chatrooms
     [chats1, chats2].flatten
+  end
+
+  def days_meals
+    meal_eatens.where(date: Date.today)
+  end
+
+  def days_calories
+    total = 0
+    days_meals.each { |m| total += m.meal.total_calories }
+    total
+  end
+
+  def days_protiens
+    total = 0
+    days_meals.each { |m| total += m.meal.total_proteins }
+    total
+  end
+
+  def days_fats
+    total = 0
+    days_meals.each { |m| total += m.meal.total_fats }
+    total
+  end
+
+  def days_carbs
+    total = 0
+    days_meals.each { |m| total += m.meal.total_carbs }
+    total
   end
 end
