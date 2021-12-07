@@ -1,1 +1,48 @@
 // Specific CSS for your home-page
+.home-container {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  max-width: 70%;
+  h1 {
+    color: #4F46E5;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  .home-info {
+    width: 50%;
+    padding-right: 5%;
+  }
+  .home-form {
+    background-color: #fff;
+    width: 50%;
+    font-size: 20px;
+    padding: 40px 16px;
+    border-radius: 16px;
+    box-shadow: 1px 1px 3px #888888;
+  }
+  input {
+    font-size: 24px;
+  }
+  hr {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+  .home-btn {
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: #049b52;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    &:hover {
+      background-color: #038144;
+    }
+    border-radius: 0.375rem;
+  }
+}
