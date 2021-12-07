@@ -1,22 +1,38 @@
-<div class="wsheading">
-  <h1>Your Workouts</h1>
-</div>
-
-<% @workout_sessions.each do |workout_session| %>
-
-<div class="ws-card-container">
-  <div class="ws-card">
-        <div class="ws-card-heading">
-          <h2 class="ws-heading"><%="#{workout_session.workout.name}" %></h2>
-          <i id="weight" class="fas fa-weight-hanging"></i>
-          <h3><%= "#{workout_session.workout.workout_type}" %></h3>
-          <%= link_to "details", workout_session_path(workout_session), class: "details" %>
-        </div>
-    </div>
-</div>
-<% end %>
-
-<h4 class="ws-new"><%= link_to "Add A New Workout Session", new_workout_session_path %></h4>
 <%= link_to root_path, class: "btn-back" do %>
 <i class="fas fa-arrow-left"></i>
 <% end %>
+
+<div class="food-container food-title">
+  <h2>Your Workouts</h2>
+  <%= link_to "Add A New Workout Session", new_workout_session_path, class: "new-btn"%>
+</div>
+<div class="food-container">
+  <% @workout_sessions.each do |workout_session| %>
+    <div class="me-card-container">
+      <div class="me-card">
+            <div class="card-heading">
+              <div>
+                <div class="top-line">
+                  <h4 class="meal-type"><%="#{workout_session.workout.name}" %></h4>
+                  <%= link_to workout_session_path(workout_session), method: :delete do %>
+                    <i class="far fa-trash-alt"></i>
+                  <% end %>
+                </div>
+                <h2 class="heading"><%= "#{workout_session.workout.workout_type}" %></h2>
+              </div>
+              <div>
+                <p class="information_workout" >Date: <%=workout_session.time%></p>
+                <%= link_to "details", workout_session_path(workout_session), class: "details" %>
+              </div>
+            </div>
+            <%# <div class="ed-buttons">
+            <p class="edit-btn">Edit</p>
+            <p class="delete-btn">Delete</p>
+            </div> %>
+        </div>
+    </div>
+    <% end %>
+
+</div>
+<div>
+</div>

@@ -8,15 +8,15 @@ require "open-uri"
 #   Character.create(name: 'Luke', movie: movies.first)
 j = 0
 
-user = User.create!({ avatar_url: "https://i.pravatar.cc/150?img=#{j}", username: 'jesse', email: 'jesse@dynami.com', password: '123456', password_confirmation: '123456' })
-j += 1
-User.create!({ avatar_url: "https://i.pravatar.cc/150?img=#{j}", username: 'callum', email: 'callum@dynami.com', password: '123456', password_confirmation: '123456' })
-j += 1
-User.create!({ avatar_url: "https://i.pravatar.cc/150?img=#{j}", username: 'sholom', email: 'sholom@dynami.com', password: '123456', password_confirmation: '123456' })
-j += 1
-workout = Workout.create!({ workout_type: "Push", name: "Chest Day", user: user})
-WorkoutExercise.create!({ name: "Bench Press", workout: workout, reps: 10, sets: 3, weight: 70 })
-WorkoutSession.create!({ user: user, workout: workout, time: Time.now })
+# user = User.create!({ avatar_url: "https://i.pravatar.cc/150?img=#{j}", username: 'jesse', email: 'jesse@dynami.com', password: '123456', password_confirmation: '123456' })
+# j += 1
+# User.create!({ avatar_url: "https://i.pravatar.cc/150?img=#{j}", username: 'callum', email: 'callum@dynami.com', password: '123456', password_confirmation: '123456' })
+# j += 1
+# User.create!({ avatar_url: "https://i.pravatar.cc/150?img=#{j}", username: 'sholom', email: 'sholom@dynami.com', password: '123456', password_confirmation: '123456' })
+# j += 1
+# workout = Workout.create!({ workout_type: "Push", name: "Chest Day", user: user})
+# WorkoutExercise.create!({ name: "Bench Press", workout: workout, reps: 10, sets: 3, weight: 70 })
+# WorkoutSession.create!({ user: user, workout: workout, time: Time.now })
 
 10.times do
   User.create!({ avatar_url: "https://i.pravatar.cc/150?img=#{j}", username: Faker::FunnyName.name, email: Faker::Internet.email, password: '123456', password_confirmation: '123456' })
@@ -36,5 +36,5 @@ image5 = 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-1.2
   # post.user = user
   # post.caption = Faker::GreekPhilosophers.quote
   # post.photo.attach(io: logo, filename: "post.jpeg", content_type: 'image/jpeg')
-  post.save!
+  # post.save!
 end
