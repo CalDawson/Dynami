@@ -1,0 +1,65 @@
+.chatrooms-container {
+  width: 60%;
+  display: flex;
+  margin: auto;
+  padding: 20px;
+  justify-content: space-evenly;
+}
+
+.chat-heading, .other-chat-title  {
+  font-family: 'Raleway', sans-serif;
+  font-size: 50px;
+  font-weight: 900;
+  text-transform: capitalize;
+  text-align: center;
+  padding: 10px;
+}
+
+.chat-container, .other-container {
+  background-color: white;
+  border-radius: 20px;
+  min-height: 500px;
+  min-width: 400px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.chat-name {
+    flex-grow: 1;
+}
+
+.chat-name p {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 500;
+  color: black;
+  font-size: 16px!important;
+}
+
+.chat-name span {
+  font-family: "Poppins", sans-serif !important;
+  color: rgb(46, 45, 45);
+  font-size: 13px!important;
+  padding-left: 24px;
+}
+
+.chat-preview {
+  display: flex;
+  margin-left: 0;
+  min-height: 50px;
+
+  span {
+  font-family: "Poppins", sans-serif !important;
+  color: rgba(77, 77, 77, 0.719);
+  font-size: 12px!important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .chatrooms-container {
+    max-width: 500px;
+    justify-content: center;
+    flex-direction: column;
+  }
+}

@@ -3,7 +3,18 @@
   <div class="chat-card">
     <div class="chat-user">
       <img class="h-8 w-8 rounded-full" src=<%= chatroom.users.find { |u| u != current_user}.avatar_url %> alt="">
-      <p><%= chatroom.users.find { |u| u != current_user}.username %> </p>
+      <div class="chat-name">
+        <p><%= chatroom.users.find { |u| u != current_user}.username %> </p>
+        <% if chatroom.messages.count > 0 %>
+          <span><%= chatroom.messages.last.content %></span>
+        <% end %>
+        </div>
+
+        <div class="chat-preview">
+        <% if chatroom.messages.count > 0 %>
+          <span><%= chatroom.messages.last.created_at.strftime("%l:%M%p") %></span>
+        <% end %>
+        </div>
     </div>
   </div>
   <%end %>

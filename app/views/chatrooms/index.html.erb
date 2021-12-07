@@ -1,8 +1,15 @@
 <%= link_to root_path, class: 'btn-back' do %>
   <i class="fas fa-arrow-left"></i>
 <% end %>
-<h3 class='ml-4'>Chats</h3>
-<%= render "shared/chats", chatrooms: @chatrooms %>
 
-<h5 class='ml-4'>Other members</h5>
-<%= render "shared/users", users: @other_users %>
+<div class="chatrooms-container">
+  <div class="chat-container">
+    <h3 class='chat-heading'>Chats</h3>
+    <%= render "shared/chats", chatrooms: @chatrooms %>
+  </div>
+
+  <div class="other-container">
+    <h5 class='other-chat-title'>Other members</h5>
+    <%= render "shared/users", users: @other_users %>
+  </div>
+</div>
