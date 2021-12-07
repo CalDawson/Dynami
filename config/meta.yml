@@ -1,0 +1,4 @@
+meta_product_name: "Product Name"
+meta_title: "Dynami - Get fit. Get social"
+meta_description: "KLeep track of your nutrition intake and your workouts whist also keeping up with friends"
+meta_image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" # should exist in `app/assets/images/`
