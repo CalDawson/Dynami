@@ -1,7 +1,7 @@
 <% if message.user == current_user %>
   <div class="p-2 pl-4 bg-white m-1.5 ml-3 rounded message-right">
   <% else %>
-  <div class="p-2 pl-4 bg-white m-1.5 ml-3 rounded">
+  <div class="p-2 pl-4 bg-white m-1.5 ml-3 rounded message-left">
 <% end %>
   <div class="message-container" id="message-<%= message.id %>">
     <i class="author text-sm">
