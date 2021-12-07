@@ -35,9 +35,10 @@ nav {
   justify-content: space-around;
   list-style: none;
   align-items: center;
-  min-width: 800px;
+  max-width: 60%;
   margin-left: auto;
   margin-right: auto;
+  flex-grow: 1;
 }
 
 .nav-links a {
