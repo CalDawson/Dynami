@@ -36,21 +36,21 @@
     margin-top: 16px;
     margin-bottom: 16px;
   }
-  .home-btn {
-    width: 100%;
-    border-radius: 18px!important;
-    font-family: 'Poppins', sans-serif!important;
-    font-weight: normal!important;
-    padding: 0.7rem!important;
-    background-color: #FF8458;
-    text-align: center;
-    color: #fff;
-    border: solid medium #FF8458!important;
-    &:hover {
-      background-color: transparent!important;
-      color: black!important;
-      transition: all 0.3s ease!important;
-    }
+}
+.home-btn {
+  width: 100%;
+  border-radius: 18px!important;
+  font-family: 'Poppins', sans-serif!important;
+  font-weight: normal!important;
+  padding: 0.7rem!important;
+  background-color: #FF8458;
+  text-align: center;
+  color: #fff;
+  border: solid medium #FF8458!important;
+  &:hover {
+    background-color: transparent!important;
+    color: black!important;
+    transition: all 0.3s ease!important;
   }
 }
 
@@ -72,4 +72,9 @@
 .form-check {
   align-items: center;
   display: flex;
+}
+
+.divider {
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
