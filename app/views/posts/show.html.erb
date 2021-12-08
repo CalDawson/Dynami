@@ -1,14 +1,48 @@
-<h2>show page</h2>
-
-<%= render "post", post: @post %>
-  <% @post.comments.each do |comment| %>
-  <p><%= comment.user.username %></p>
-  <span><%= comment.content %></span>
-  <% end %>
-
-<%= simple_form_for([@post, @comment]) do |f| %>
-<%= f.input :content, label: 'Leave a comment...'%>
-<div class="form-actions">
-    <%= f.button :submit, { class: 'btn btn-primary' } %>
+<div class="post-show">
+  <div class='img'>
+  <%= cl_image_tag @post.photo.key, height: 600, width: 400, crop: :fill %>
   </div>
-<% end %>
+  <div class="post-comments">
+    <div class="coments">
+      <div class="caption">
+        <p><b><%= @post.user.username %></b> - </p>
+        <span><%= @post.caption %></span>
+      </div>
+      <% @post.comments.each do |comment| %>
+      <div class="comment">
+        <p><b><%= comment.user.username %> - </b></p>
+        <span><%= comment.content %></span>
+      </div>
+      <% end %>
+    </div>
+
+    <div class="comment-form">
+      <ul class = "list-inline mb-2">
+        <li>
+          <div class="like_subscribe <%= "liked" if liked?(@post) %>" data-post-id="<%= @post.id %>">
+            <i class="fas fa-heart"></i>
+          </div>
+        </li>
+        <li>
+          <div class="share_icon">
+            <i class="far fa-paper-plane"></i>
+          </div>
+        </li>
+        <li>
+          <div class="bookmark_icon">
+            <i class="far fa-bookmark"></i>
+          </div>
+        </li>
+      </ul>
+      <%= simple_form_for([@post, @comment]) do |f| %>
+        <div class="post-comment">
+          <%= f.input :content, label: false, class: "comment-input", placeholder: "comment"%>
+          <div class="comment-btn">
+            <%= f.submit value: "Post",class: 'comment-btn'%>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+</div>
