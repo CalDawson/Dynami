@@ -1,3 +1,8 @@
+<div class="back-button-container">
+<%= link_to workout_path(@workout), class: "btn-back" do %>
+  <i class="far fa-arrow-alt-circle-left"></i>
+<% end %>
+</div>
 <h2>Workout exercises new page</h2>
 
 <%= simple_form_for([@workout, @workout_exercise]) do |f| %>
@@ -9,4 +14,3 @@
     <%= f.button :submit, { class: 'btn btn-primary' } %>
   </div>
 <% end %>
-<%= link_to 'Back', new_workout_session_path %>
