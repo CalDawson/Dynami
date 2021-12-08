@@ -12,6 +12,7 @@ const initLikeListener = () => {
             'X-CSRF-Token': token
           },
         });
+        likes[i].innerHTML = "<i class='far fa-heart'></i>";
       } else {
         fetch(`/posts/${postId}/likes`, {
           method: "POST",
@@ -19,6 +20,7 @@ const initLikeListener = () => {
             'X-CSRF-Token': token
           },
         });
+        likes[i].innerHTML = "<i class='fas fa-heart'></i>";
       }
       likes[i].classList.toggle("liked");
     })
