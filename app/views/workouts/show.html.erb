@@ -12,3 +12,7 @@
   <div class="ws-exercise-card-container">
     <%= render "shared/exercises", exercises: @workout.workout_exercises, workout: @workout %>
   </div>
+
+<div class="c-button">
+  <p><%= link_to "Log Your Workout", new_workout_session_path, class: "btn-primary" %></p>
+</div>
