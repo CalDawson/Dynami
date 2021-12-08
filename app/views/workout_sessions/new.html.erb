@@ -1,9 +1,14 @@
-<div>
-  <h1>Workout_session new page</h1>
+<div class="back-button-container">
+<%= link_to workout_sessions_path, class: "btn-back" do %>
+  <i class="far fa-arrow-alt-circle-left"></i>
+<% end %>
 </div>
 
+<div class="ws-heading">
+  <h1>Add a New Workout Session!</h1>
+</div>
 
-<div class="container">
+<div class="container ws-container">
   <%= simple_form_for(@session) do |f| %>
     <%= f.association :workout, collection: current_user.workouts, prompt: 'Select a workout'%>
     <%= f.input :time %>
@@ -11,11 +16,14 @@
   <% end %>
 </div>
 
-<div class="container">
+<div class="ws-heading">
+  <h1>Add a New Workout!</h1>
+</div>
+
+<div class="container ws-container">
   <%= simple_form_for(@workout) do |f| %>
     <%= f.input :name %>
     <%= f.input :workout_type %>
     <%= f.submit value: 'Create New Workout', class:'btn btn-primary' %>
   <% end %>
 </div>
-<%= link_to 'Back', workout_sessions_path %>

@@ -1,4 +1,12 @@
-<h2>Workout exercises new page</h2>
+<div class="back-button-container">
+<%= link_to workout_path(@workout), class: "btn-back" do %>
+  <i class="far fa-arrow-alt-circle-left"></i>
+<% end %>
+</div>
+
+<div class="ws-heading">
+  <h2>Add a New Exercise</h2>
+</div>
 
 <%= simple_form_for([@workout, @workout_exercise]) do |f| %>
 <%= f.input :name, label: 'Name Of Exercise?'%>
@@ -9,4 +17,3 @@
     <%= f.button :submit, { class: 'btn btn-primary' } %>
   </div>
 <% end %>
-<%= link_to 'Back', new_workout_session_path %>

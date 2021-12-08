@@ -80,13 +80,20 @@
 
 .new-btn {
 background-color: #FFC34A;
-  border-radius: 8px;
-  color: white;
-  font-size: 20px;
-  font-family: "Poppins", sans-serif !important;
-  padding: 10px 20px!important;
-  font-weight: bold;
-  text-transform: uppercase;
+border-radius: 8px;
+color: white;
+font-size: 20px;
+font-family: "Poppins", sans-serif !important;
+padding: 10px 20px!important;
+font-weight: bold;
+text-transform: uppercase;
+border: medium solid #FFC34A;
+  &:hover {
+    border: medium solid #FFC34A!important;
+    color: #FFC34A!important;
+    background-color: transparent!important;
+    transition: all 0.2s ease-in ease-out;
+  }
 }
 
 .card-heading {

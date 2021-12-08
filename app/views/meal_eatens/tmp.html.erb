@@ -1,7 +1,8 @@
-<%# this one %>
-
+<div class="back-button-container">
 <%= link_to root_path, class: "btn-back" do %>
-<i class="fas fa-arrow-left"></i>
+  <i class="far fa-arrow-alt-circle-left"></i>
+<% end %>
+</div>
 
 <div class="wsheading">
   <h2>Your Workouts</h2>
@@ -24,6 +25,5 @@
 </div>
 <% end %>
 
-<% end %>
 
 <h4 class="ws-new"><%= link_to "Add A New Workout Session", new_workout_session_path %></h4>

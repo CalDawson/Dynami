@@ -14,7 +14,7 @@
 @import "pages/index";
 @import "pages/workout_sessions_index";
 @import "pages/workout_sessions_show";
-
+@import "pages/meal_show";
 
 a:hover {
   text-decoration: none;
@@ -22,4 +22,19 @@ a:hover {
 
 body {
   padding: 0px;
+}
+
+.back-button-container {
+  width: 100%;
+}
+
+.btn-back {
+  color: #753fee;
+  font-size: 35px;
+  margin-left: 25px;
+  margin-top: 5px;
+  &:hover {
+    color: #EF00BC;
+    transition: all 0.3s ease-in-out;
+  }
 }
