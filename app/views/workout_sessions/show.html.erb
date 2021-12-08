@@ -1,6 +1,8 @@
+<div class="back-button-container">
 <%= link_to workout_sessions_path, class: "btn-back" do %>
-<i class="fas fa-arrow-left"></i>
+  <i class="far fa-arrow-alt-circle-left"></i>
 <% end %>
+</div>
 <div class = "workout-container">
   <%= render "shared/exercises", exercises: @session.workout.workout_exercises, class: "ex-card-body"%>
 </div>

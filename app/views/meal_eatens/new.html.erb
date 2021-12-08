@@ -1,3 +1,9 @@
+<div class="back-button-container">
+<%= link_to meal_eatens_path, class: "btn-back" do %>
+  <i class="far fa-arrow-alt-circle-left"></i>
+<% end %>
+</div>
+
 <h2>Log a New Food</h2>
 
 <div class="container">
@@ -15,7 +21,3 @@
     <%= f.submit value: 'Name this meal', class:'btn btn-primary' %>
   <% end %>
 </div>
-
-<%= link_to meal_eatens_path, class: "btn-back" do %>
-  <i class="fas fa-arrow-left"></i>
-<% end %>
