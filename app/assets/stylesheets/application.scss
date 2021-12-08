@@ -23,3 +23,18 @@ a:hover {
 body {
   padding: 0px;
 }
+
+.back-button-container {
+  width: 100%;
+}
+
+.btn-back {
+  color: #753fee;
+  font-size: 35px;
+  margin-left: 25px;
+  margin-top: 5px;
+  &:hover {
+    color: #EF00BC;
+    transition: all 0.3s ease-in-out;
+  }
+}

@@ -8,4 +8,8 @@
   </div>
 <% end %>
 
-<%= link_to "I don't want to share", meal_eatens_path %>
+<% if @source.class == MealEaten %>
+  <%= link_to "I don't want to share", meal_eatens_path %>
+<% else %>
+  <%= link_to "I don't want to share", workout_sessions_path %>
+<% end %>

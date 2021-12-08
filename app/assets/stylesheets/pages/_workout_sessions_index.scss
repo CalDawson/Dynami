@@ -67,7 +67,7 @@
   font-size: 15px;
   text-transform: uppercase;
   padding: 7px;
-  // display: inline-block;
+  border: solid medium #753fee;
   background: #753fee;
   border-radius: 5px;
   color: #faf1ff;
@@ -105,6 +105,8 @@
 .details:hover {
   background: none;
   color: #753fee;
+  border: solid medium #753fee;
+  transition: all 0.2s ease-in ease-out;
 }
 .card_container{
   width: 80%;

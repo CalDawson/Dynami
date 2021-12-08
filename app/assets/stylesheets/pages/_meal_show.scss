@@ -20,8 +20,8 @@
   text-align: center;
   margin-top: 24px;
 }
-s
-  .food-card-body {
+
+.food-card-body {
   display: flex;
   justify-content: center;
   text-align: center;
@@ -57,12 +57,14 @@ s
   // margin-bottom: 8px;
   margin-top: 12px;
   width: 30%;
+  border:solid medium red;
 }
 
 .delete_food_button:hover {
   background: none;
   color: red;
-  border: 1px solid red;
+  border:solid medium red;
+  transition: all 0.5s ease-in-out;
 }
 
 #my-pie-chart {
@@ -76,7 +78,11 @@ s
 }
 
 #my-pie-chart {
+<<<<<<< HEAD
     background: conic-gradient(brown 29.100529100529098%, black 29.100529100529098% 8.994708994708994%,  yellow 8.994708994708994%);
+=======
+  // background: conic-gradient(rgb(0, 255, 21) carbs_total% rgb(68, 0, 255) protein_total% fats_total% rgb(55, 0, 55) fats_total%)
+>>>>>>> d2e4af823083767d88c64fbf3975dcd1921a47fc
 }
 
 .flex-container {

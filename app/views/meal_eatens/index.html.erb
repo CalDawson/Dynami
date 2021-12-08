@@ -1,6 +1,8 @@
+<div class="back-button-container">
 <%= link_to root_path, class: "btn-back" do %>
-<i class="fas fa-arrow-left"></i>
+  <i class="far fa-arrow-alt-circle-left"></i>
 <% end %>
+</div>
 
 <div class="food-container food-title">
   <h2>Your Food Log</h2>
@@ -29,7 +31,7 @@
               </div>
             </div>
             <div>
-                <%= link_to "details", meal_path(meal.id), class: "details" %>
+                <%= link_to "details", meal_path(meal.meal), class: "details" %>
             </div>
             <%# <div class="ed-buttons">
             <p class="edit-btn">Edit</p>
