@@ -23,6 +23,12 @@
   img{
     border-radius: 16px;
   }
+  .comments {
+    width: 100%;
+    height: fit-content;
+    overflow: scroll;
+    max-height: 100%;
+  }
 }
 
 .post-comments {
@@ -40,12 +46,6 @@
 }
 
 
-.comments {
-  width: 100%;
-  height: fit-content;
-  overflow: scroll;
-  max-height: 100%;
-}
 
 .comment-btn {
   background-color: #fff;
