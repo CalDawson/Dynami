@@ -1,23 +1,23 @@
 .ex-card {
   // border: 1px solid blueviolet;
-  background-color: white;
-  border-radius: 24px;
-  width: 50%;
-  padding: 2rem;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;x-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-  justify-content: center;
-  text-align: center;
-  margin-top: 24px;
+  // background-color: white;
+  // border-radius: 24px;
+  // width: 50%;
+  // padding: 2rem;
+  // box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;x-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  // justify-content: center;
+  // text-align: center;
+  // margin-top: 24px;
 }
 .ex-card-body {
   // width: 50%;
   // padding: 15px;
 }
 
-.exercise_name {
-  font-size: 24px;
-  margin-bottom: 24px;
-}
+// .exercise_name {
+//   font-size: 24px;
+//   margin-bottom: 24px;
+// }
 
 .exercise_inline {
   display: inline-block;
@@ -59,20 +59,26 @@
 // This is some filler text :)
 //
 
-.ws-heading h1{
+.ws2-heading {
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  max-width: 80%;
+  margin-top: 28px;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ws2-heading h2 {
   font-family: 'Raleway', sans-serif;
   font-size: 50px;
   font-weight: 900;
   text-transform: capitalize;
-  display: flex;
   margin-bottom: 10px;
-  justify-content: center;
-  max-width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
   flex-direction: row;
 }
+
 
 .select, .date, .string, .integer  {
   font-family: 'Poppins', sans-serif!important;
@@ -131,4 +137,56 @@ width: 100%;
 .new-workout-button {
   display: flex;
   justify-content: center;
+  margin-top: 24px;
+}
+
+.ws-exercise-card-container {
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.ex-card {
+  width: 25%;
+  padding: 15px;
+}
+
+.ex-card-body {
+  background-color: white;
+  border-radius: 12px;
+  width: 100%;
+  padding: 2rem;
+}
+
+.top-line-ws {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.top-line-ws h4 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+  font-size: 15px;
+  text-transform: uppercase;
+  padding: 7px;
+  display: inline-block;
+  background: #ffeed0;
+  border-radius: 5px;
+  color: #ff4040;
+  margin-bottom: 8px;
+}
+
+.exercise_name {
+  text-decoration: none;
+  font-size: 26px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+  color: black;
+  /* padding: 0.5rem; */
+  text-transform: capitalize;
+  margin-bottom: 10px;
 }

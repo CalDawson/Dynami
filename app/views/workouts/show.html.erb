@@ -1,9 +1,14 @@
-<div class="ws-heading">
-  <h2>Your Workout</h2>
+<div class="back-button-container">
+<%= link_to workout_path(@workout), class: "btn-back" do %>
+  <i class="far fa-arrow-alt-circle-left"></i>
+<% end %>
 </div>
 
-<%= render "shared/exercises", exercises: @workout.workout_exercises, workout: @workout %>
-
-<div class="new-workout-button">
+<div class="ws2-heading">
+  <h2>Your Workout</h2>
   <p><%= link_to "Add a New Workout", new_workout_workout_exercise_path(@workout), class: "btn-primary" %></p>
 </div>
+
+  <div class="ws-exercise-card-container">
+    <%= render "shared/exercises", exercises: @workout.workout_exercises, workout: @workout %>
+  </div>
