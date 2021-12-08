@@ -1,12 +1,12 @@
 <div class="flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-  <div class="max-w-md w-full sign-up">
+  <div class="max-w-md w-full sign-up sign-up-form-container">
     <h2 class="text-center text-3xl font-extrabold text-gray-900">
       Create a new account account
     </h2>
     <br>
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= f.error_notification %>
-        <form class="mt-8 space-y-6" method="POST">
+        <form class="mt-8 space-y-6 sign-up-form-container" method="POST">
         <input type="hidden" name="remember" value="true">
           <div>
             <%= f.input :email,

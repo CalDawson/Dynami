@@ -1,16 +1,16 @@
 <div class="ex-card">
-  <div class="wsheading">
-    <h2><%= "#{workout.name}" %>  -  <%= "#{workout.workout_type}" %></h2>
-  </div>
   <% exercises.each do |workout_log|  %>
     <div class="ex-card-body">
+      <div class="top-line-ws">
+        <h4><%= "#{workout.name}" %>  -  <%= "#{workout.workout_type}" %></h4>
+      </div>
       <div>
         <div class="exercise_card_heading">
-            <p class = "exercise_name"><%= "Exercise Name: #{workout_log.name}" %></p>
-            <div class = "exercise_inline">
-              <p class= "reps"><%= "Reps: #{workout_log.reps}" %></p>
-              <p class= "sets"><%= "Sets: #{workout_log.sets}" %></p>
-              <p class= "weight"><%= "Weight: #{workout_log.weight}" %></p>
+            <p class = "exercise_name"><%= "Exercise: #{workout_log.name}" %></p>
+            <div class = "info">
+              <p class= "information"><b>Reps:</b><span><%="#{workout_log.reps}"%></span></p>
+              <p class= "information"><b>Sets:</b><span><%="#{workout_log.sets}"%></span></p>
+              <p class= "information"><b>Weight:</b><span><%="#{workout_log.weight}"%></span></p>
             </div>
         </div>
       </div>

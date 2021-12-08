@@ -1,8 +1,9 @@
 <div class="back-button-container">
-<%= link_to chatrooms_path, class: 'btn-back' do %>
-  <i class="fas fa-arrow-left"></i>
+<%= link_to chatrooms_path, class: "btn-back" do %>
+  <i class="far fa-arrow-alt-circle-left"></i>
 <% end %>
 </div>
+
 <div class="chatroom-container">
   <h4 class='chat-username'><%= @chatroom.users.find { |user| user != current_user}.username %></h4>
     <div id="messages" data-chatroom-id="<%= @chatroom.id %>" style="height: 70vh; overflow: scroll;">
