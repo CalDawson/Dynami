@@ -15,11 +15,12 @@
           </div>
         </div>
         <div class="flex-child green">
-          <div id="my-pie-chart"></div>
           <% total =  food.carbs + food.protein + food.fats %>
-          <% carbs_total = food.carbs/total %>
-          <% protein_total = food.protein/total %>
-          <% fats_total = food.fats/total %>
+          <% carbs_total = food.carbs.fdiv(total) * 100 %>
+          <% protein_total = food.protein.fdiv(total) * 100 %>
+          <% fats_total = food.fats.fdiv(total) * 100%>
+          <%# <div id="my-pie-chart" style = "background: conic-gradient brown <%= fats_total%>%, black <%= fats_total %>% <%= protein_total %>%, red <%= protein_total %>%)"></div> %>
+          <div id="my-pie-chart"></div>
         </div>
       </div>
       </div>
