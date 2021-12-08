@@ -1,45 +1,54 @@
-<h2>Sign up</h2>
-<div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-  <div class="max-w-md w-full space-y-8">
-    <div>
-      <img class="mx-auto h-12 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="Workflow">
-      <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
-        Create a new account account
-      </h2>
-<br>
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
+<div class="flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-md w-full">
+    <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
+      Create a new account account
+    </h2>
+    <br>
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= f.error_notification %>
 
-  <div class="form-inputs">
+      <div class="form-inputs">
+        <form class="mt-8 space-y-6" method="POST">
+        <input type="hidden" name="remember" value="true">
+        <div class="rounded-md shadow-sm -space-y-px">
+          <div>
+            <%= f.input :email,
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "email" },
+                        label: false,
+                        placeholder: "email" %>
+            <%= f.input :username,
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "username" },
+                        label: false,
+                        placeholder: "Username" %>
+            <%= f.input :password,
+                        required: true,
+                        hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                        input_html: { autocomplete: "new-password" },
+                        label: false,
+                        placeholder: "Password" %>
+            <%= f.input :password_confirmation,
+                        required: true,
+                        input_html: { autocomplete: "new-password" },
+                        label: false,
+                        placeholder: "confirm password" %>
+            <%= button_tag(type: 'submit', class: 'group relative w-full flex justify-center py-2 px-4 border border-transparent text-xlg font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dynami-login') do %>
+              Signup
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+    <div class="divider">
+      <hr>
     </div>
-    <form class="mt-8 space-y-6" action="#" method="POST">
-      <input type="hidden" name="remember" value="true">
-      <div class="rounded-md shadow-sm -space-y-px">
-        <div>
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :username,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "username" }%>
-    <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
-    <%= button_tag(type: 'submit', class: 'group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500') do %>
-      <span class="absolute left-0 inset-y-0 flex items-center pl-3">
-        <!-- Heroicon name: solid/lock-closed -->
-        <svg class="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-          <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
-        </svg>
-      </span>
-      Signup
+    <%= link_to new_user_session_path do %>
+      <div class="home-btn">
+      Sign in
+      </div>
     <% end %>
   </div>
-<% end %>
-<%= link_to "Sign In", new_user_session_path %>
+</div>
