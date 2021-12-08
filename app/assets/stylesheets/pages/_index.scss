@@ -22,13 +22,12 @@
 }
 
 .postpage {
-  // max-width: 500px;
   display: block;
   margin: auto;
-  width: 80%;
   border-radius: 16px;
-  margin-bottom: 16px;
+  margin-bottom: 28px;
   background-color: white;
+  margin-left: 66px;
 }
 
 .h2_new {
@@ -46,11 +45,12 @@ body {
 }
 
 .like_subscribe {
-  color: #ddd;
+  color: black;
 }
 
 .like_subscribe.liked {
   color: #f00;
+  fill: #f00;
 }
 
 .list-inline {
@@ -65,7 +65,7 @@ body {
 }
 
 .post_page_card_image {
-width: 95%;
+width: 97%;
 border-radius: 16px;
 padding-bottom: 0px!important;
 display: block;
@@ -74,24 +74,45 @@ margin-right: auto;
 padding-bottom: 8px;
 }
 
+.likedby {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
 .user_caption{
   display: inline-block;
-  padding-bottom: 4px;
-
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 18px;
 }
-.post_comments{
+
+.post_comments {
   display: inline-block;
-  padding-bottom: 16px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.post_comments a {
+  display: inline-block;
+  color: rgb(180, 180, 180);
+  margin-bottom: 5px;
+}
+
+.posted-at p  {
+  font-size: 13px;
+  color: rgb(199, 199, 199);
+  padding-bottom: 11px;
 }
 
 .card-col {
-  width: 65%;
+  width: 45%;
 }
 
 .liked_by {
-  padding-bottom: 4px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .bottom_half {
-  padding-left: 8px;
+  margin-left: 16px;
 }
