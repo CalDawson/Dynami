@@ -1,11 +1,11 @@
 <div class="hero_banner">
   <div class="title">
     <h2>Welcome <%= current_user.username %></h2>
-    <h4>Here's How You're Going Today...</h4>
+    <h4>Here Are Your Totals For The Day...</h4>
   </div>
   <div class="nutrition-cards">
     <div class="n-card">
-      <%= render "shared/progress", classes: "banner_progress", progress: 40 %>
+      <%= render "shared/progress", progress: (current_user.days_carbs.fdiv(300)), classes: 'mr-3' %>
       <div class="n-card-heading">
       <%# <i class="fas fa-bread-slice"></i> %>
       <h4>Carbohydrates</h4>
@@ -14,7 +14,7 @@
     </div>
 
     <div class="n-card">
-      <%= render "shared/progress", classes: "banner_progress", progress: 40 %>
+      <%= render "shared/progress", progress: (current_user.days_fats.fdiv(100)) , classes: 'mr-3' %>
       <div class="n-card-heading">
       <%# <i class="fas fa-bread-slice"></i> %>
       <h4>Fats</h4>
@@ -23,7 +23,7 @@
     </div>
 
     <div class="n-card">
-      <%= render "shared/progress", classes: "banner_progress", progress: 40 %>
+      <%= render "shared/progress", progress: (current_user.days_protiens.fdiv(200)), classes: 'mr-3' %>
       <div class="n-card-heading">
       <%# <i class="fas fa-bread-slice"></i> %>
       <h4>Proteins</h4>
@@ -32,7 +32,7 @@
     </div>
 
     <div class="n-card">
-      <%= render "shared/progress", classes: "banner_progress", progress: 40 %>
+      <%= render "shared/progress", progress: (current_user.days_calories.fdiv(2000)), classes: 'mr-3' %>
       <div class="n-card-heading">
       <%# <i class="fas fa-bread-slice"></i> %>
       <h4>Calories</h4>

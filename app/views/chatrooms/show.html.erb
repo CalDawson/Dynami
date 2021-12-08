@@ -10,10 +10,13 @@
       <% end %>
     </div>
 
+
   <%= simple_form_for [ @chatroom, @message ], remote: true do |f| %>
-    <div class="d-flex align-items-center">
+    <div class="d-flex align-items-center chatbox-form">
       <%= f.input :content, wrapper_html: { class: "flex-grow-1 p-2 mb-0" }, label: false, placeholder: "New Message" %>
-      <%= f.submit value: 'Send', class: "btn btn-success mr-2", id: "send-btn" %>
+        <%= button_tag(type: "submit", class: "btn btn-success mr-2", id: "send-btn")do %>
+            <i class="fas fa-arrow-circle-right"></i>
+        <% end %>
     </div>
   <% end %>
 </div>

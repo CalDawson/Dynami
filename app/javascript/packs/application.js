@@ -32,10 +32,12 @@ import "bootstrap";
 import { navSlide } from "../likes/navbar";
 import { initLikeListener } from "../likes/like";
 import { initChatroomCable } from "../channels/chatroom_channel";
+import { initProgressBars} from "../components/progress_bar";
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   initChatroomCable()
   initLikeListener()
   navSlide()
+  initProgressBars()
 });
