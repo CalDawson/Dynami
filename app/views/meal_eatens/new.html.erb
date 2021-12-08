@@ -4,9 +4,11 @@
 <% end %>
 </div>
 
-<h2>Log a New Food</h2>
+<div class="me-new-heading">
+  <h2>Log a New Meal</h2>
+</div>
 
-<div class="container">
+<div class="container new_meal_session">
   <%= simple_form_for(@meal_eaten) do |f| %>
     <%= f.association :meal, collection: current_user.meals, prompt: 'Select a meal'%>
     <%= f.input :meal_type, prompt: "What type of meal is this?" %>
@@ -15,7 +17,11 @@
   <% end %>
 </div>
 
-<div class="container">
+<div class="me-new-heading">
+  <h2>Log a New Food</h2>
+</div>
+
+<div class="container new_meal_session">
   <%= simple_form_for(@meal) do |f| %>
     <%= f.input :name %>
     <%= f.submit value: 'Name this meal', class:'btn btn-primary' %>

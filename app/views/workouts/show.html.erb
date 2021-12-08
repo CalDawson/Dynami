@@ -1,5 +1,18 @@
-<h2>Workout Show Page</h2>
+<div class="back-button-container">
+<%= link_to workout_path(@workout), class: "btn-back" do %>
+  <i class="far fa-arrow-alt-circle-left"></i>
+<% end %>
+</div>
 
-<%= render "shared/exercises", exercises: @workout.workout_exercises, workout: @workout %>
+<div class="ws2-heading">
+  <h2>Your Workout</h2>
+  <p><%= link_to "Add a New Workout", new_workout_workout_exercise_path(@workout), class: "btn-primary" %></p>
+</div>
 
-<p><%= link_to "Add a New Workout", new_workout_workout_exercise_path(@workout) %></p>
+  <div class="ws-exercise-card-container">
+    <%= render "shared/exercises", exercises: @workout.workout_exercises, workout: @workout %>
+  </div>
+
+<div class="c-button">
+  <p><%= link_to "Log Your Workout", new_workout_session_path, class: "btn-primary" %></p>
+</div>

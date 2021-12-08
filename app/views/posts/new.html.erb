@@ -1,15 +1,22 @@
-<h2>new post method</h2>
+<div class="ps-heading">
+  <h2>Share Your Post?</h2>
+</div>
 
 <%= simple_form_for([@source, @post]) do |f| %>
 <%= f.input :caption, label: 'Write a caption for your post!'%>
-<%= f.input :photo, as: :file %>
-<div class="form-actions">
-    <%= f.button :submit, { class: 'btn btn-primary' } %>
+<div class="photo-div">
+  <%= f.input :photo, as: :file, label: "Choose a Photo!" %>
+</div>
+
+<div class="form-actions sb-div">
+    <%= f.button :submit, { class: 'btn btn-primary share-btn' } %>
   </div>
 <% end %>
 
-<% if @source.class == MealEaten %>
-  <%= link_to "I don't want to share", meal_eatens_path %>
-<% else %>
-  <%= link_to "I don't want to share", workout_sessions_path %>
-<% end %>
+<div class="no-share-div">
+  <% if @source.class == MealEaten %>
+    <%= link_to "I don't want to share", meal_eatens_path, class: "no-share-btn" %>
+  <% else %>
+    <%= link_to "I don't want to share", workout_sessions_path, class: "no-share-btn" %>
+  <% end %>
+</div>
