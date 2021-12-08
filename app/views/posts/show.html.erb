@@ -1,3 +1,8 @@
+<div class="back-button-container">
+<%= link_to posts_path, class: "btn-back" do %>
+  <i class="far fa-arrow-alt-circle-left"></i>
+<% end %>
+</div>
 <h2>show page</h2>
 
 <%= render "post", post: @post %>

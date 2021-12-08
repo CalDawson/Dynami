@@ -1,3 +1,9 @@
+<div class="back-button-container">
+<%= link_to workout_sessions_path, class: "btn-back" do %>
+  <i class="far fa-arrow-alt-circle-left"></i>
+<% end %>
+</div>
+
 <div>
   <h1>Workout_session new page</h1>
 </div>
@@ -18,4 +24,3 @@
     <%= f.submit value: 'Create New Workout', class:'btn btn-primary' %>
   <% end %>
 </div>
-<%= link_to 'Back', workout_sessions_path %>
