@@ -57,3 +57,91 @@
   margin-right: 8px;
   flex-grow: 1;
 }
+
+// Post share page
+
+.ps-heading {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+  padding: 24px;
+}
+
+.ps-heading h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 50px;
+  font-weight: 900;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+.post_caption {
+  margin: auto;
+  padding: 24px;
+  width: 60%;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.photo-div {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  margin: auto;
+  text-align: center;
+}
+
+.photo-div label {
+  color: black;
+  text-align: center;
+  margin-top: 16px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+  font-weight: 900;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+.form-control-file {
+  padding: 12px;
+}
+
+.share-btn {
+  width: 30%!important;
+}
+
+.sb-div {
+  text-align: center;
+  justify-content: center;
+}
+
+.no-share-div {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.no-share-div a {
+  background-color: #00BE94;
+  text-align: center;
+  border-radius: 8px;
+  color: white;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif !important;
+  padding: 10px 20px!important;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: medium solid #00BE94;
+  width: 100%;
+    &:hover {
+      border: medium solid #00BE94!important;
+      color: #00BE94!important;
+      background-color: transparent!important;
+      transition: all 0.3s ease-in-out;
+    }
+}

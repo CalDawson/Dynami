@@ -111,7 +111,7 @@ width: 100%;
     border: medium solid #753fee!important;
     color: #753fee!important;
     background-color: transparent!important;
-    transition: all 0.2s ease-in ease-out;
+    transition: all 0.3s ease-in-out;
   }
 }
 
@@ -159,6 +159,8 @@ width: 100%;
   border-radius: 12px;
   width: 100%;
   padding: 2rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .top-line-ws {
