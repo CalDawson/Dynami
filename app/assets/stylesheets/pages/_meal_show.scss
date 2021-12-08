@@ -1,0 +1,97 @@
+.meal_show_container {
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  // display: flex;
+  // flex-direction: row;
+  // flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.food-card {
+  // border: 1px solid blueviolet;
+  background-color: white;
+  border-radius: 24px;
+  width: 100%;
+  padding: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;x-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  justify-content: center;
+  text-align: center;
+  margin-top: 24px;
+}
+s
+  .food-card-body {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  // padding: 15px;
+  margin-left: auto;
+  margin-right: auto ;
+}
+
+.food_name {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.card-heading {
+  text-align: left;
+  margin-left: 10%;
+  margin-bottom: 36px;
+}
+.delete_food_button {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 0.5rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+  font-size: 15px;
+  text-transform: uppercase;
+  padding: 7px;
+  // display: inline-block;
+  background:red;
+  border-radius: 5px;
+  color: #faf1ff;
+  // margin-bottom: 8px;
+  margin-top: 12px;
+  width: 30%;
+}
+
+.delete_food_button:hover {
+  background: none;
+  color: red;
+  border: 1px solid red;
+}
+
+#my-pie-chart {
+    height: 250px;
+    width: 250px;
+    padding-left: 50px;
+}
+
+#my-pie-chart {
+  border-radius: 50%;
+}
+
+#my-pie-chart {
+  background: conic-gradient(rgb(0, 255, 21) carbs_total% rgb(68, 0, 255) protein_total% fats_total% rgb(55, 0, 55) fats_total%)
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-child {
+    flex: 1;
+}
+
+.flex-child:first-child {
+    margin-right: 10px;
+}
+
+.green {
+  padding-left: 100px;
+}
