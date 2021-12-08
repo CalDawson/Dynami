@@ -3,7 +3,10 @@
   <i class="far fa-arrow-alt-circle-left"></i>
 <% end %>
 </div>
-<h2>Workout exercises new page</h2>
+
+<div class="ws-heading">
+  <h2>Add a New Exercise</h2>
+</div>
 
 <%= simple_form_for([@workout, @workout_exercise]) do |f| %>
 <%= f.input :name, label: 'Name Of Exercise?'%>
