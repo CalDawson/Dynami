@@ -4,12 +4,11 @@
 <% end %>
 </div>
 
-<div>
-  <h1>Workout_session new page</h1>
+<div class="ws-heading">
+  <h1>Add a New Workout Session!</h1>
 </div>
 
-
-<div class="container">
+<div class="container ws-container">
   <%= simple_form_for(@session) do |f| %>
     <%= f.association :workout, collection: current_user.workouts, prompt: 'Select a workout'%>
     <%= f.input :time %>
@@ -17,7 +16,11 @@
   <% end %>
 </div>
 
-<div class="container">
+<div class="ws-heading">
+  <h1>Add a New Workout!</h1>
+</div>
+
+<div class="container ws-container">
   <%= simple_form_for(@workout) do |f| %>
     <%= f.input :name %>
     <%= f.input :workout_type %>

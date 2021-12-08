@@ -4,5 +4,5 @@
 <% end %>
 </div>
 <div class = "workout-container">
-  <%= render "shared/exercises", exercises: @session.workout.workout_exercises, class: "ex-card-body"%>
+  <%= render "shared/exercises", exercises: @session.workout.workout_exercises, workout: @session.workout, class: "ex-card-body"%>
 </div>
