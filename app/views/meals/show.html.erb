@@ -1,6 +1,13 @@
-<%= render "shared/foods", foods: @meal.foods %>
+<%= link_to workout_sessions_path, class: "btn-back" do %>
+<i class="fas fa-arrow-left"></i>
+<% end %>
+<div class="wsheading">
+  <h2><%= "#{@meal.name}"%></h2>
+</div>
 
-<div class="container">
+<div class="meal_show_container">
+  <%= render "shared/foods", foods: @meal.foods %>
+</div>
   <%= simple_form_for([@meal, @food]) do |f| %>
   <div class="d-flex align-items-center">
     <%= f.input :name, wrapper_html: { class: "flex-grow-1 p-2 mb-0" }, label: false %>
