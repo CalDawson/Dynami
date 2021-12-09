@@ -1,19 +1,21 @@
 <%= link_to meal_eatens_path, class: "btn-back" do %>
 <i class="fas fa-arrow-left"></i>
 <% end %>
-<div class="wsheading">
-  <h2><%= "#{@meal.name}"%></h2>
-</div>
 
 <div class="meal_show_container">
+  <div class="wsheading">
+    <h2><%= "#{@meal.name}"%></h2>
+  </div>
   <%= render "shared/foods", foods: @meal.foods %>
   <div class = "add_form_simple">
       <%= simple_form_for([@meal, @food]) do |f| %>
       <div class="d-flex align-items-center">
         <%= f.input :name, wrapper_html: { class: "flex-grow-1 p-2 mb-0" }, label: false %>
         <%= f.submit value: 'Add a food', class:'btn btn-primarys' %>
-        <%= link_to "Continue", new_meal_eaten_path, class: "continue"  %>
       </div>
       <% end %>
   </div>
+<div class="continue-d">
+  <%= link_to "Continue", new_meal_eaten_path, class: "continue"  %>
+</div>
 </div>
