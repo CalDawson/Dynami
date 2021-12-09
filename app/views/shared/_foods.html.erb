@@ -7,23 +7,24 @@
       <div class="flex-container">
         <div class="flex-child magenta">
           <div class="card-heading">
-          <% total =  food.carbs + food.protein + food.fats %>
+            <% total =  food.carbs + food.protein + food.fats %>
               <p><%= "Carbs: #{food.carbs}g" %></p>
               <div class = "carbs_line">
               <% carbs_total = food.carbs.fdiv(total) * 100%>
-              <div class = "carbs_percent" style = "width:<%=carbs_total%>%;">
-              </div>
+                <div class = "carbs_percent" style = "width:<%=carbs_total%>%;">
+                </div>
               </div>
               <p><%= "Proteins: #{food.protein}g" %></p>
               <div class = "protein_line">
                <% protein_total = food.protein.fdiv(total) * 100 %>
-              <div class = "protein_percent" style = "width:<%=protein_total%>%;">
-              </div>
+                <div class = "protein_percent" style = "width:<%=protein_total%>%;">
+                </div>
               </div>
               <p><%= "Fats: #{food.fats}g" %></p>
               <div class = "fats_line">
               <% fats_total = food.fats.fdiv(total) * 100%>
-              <div class = "fats_percent" style = "width:<%=fats_total%>%;">
+                <div class = "fats_percent" style = "width:<%=fats_total%>%;">
+                </div>
               </div>
           </div>
         </div>
