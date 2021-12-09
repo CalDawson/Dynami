@@ -2,7 +2,10 @@
   <% @posts.each do |post| %>
   <div>
     <div class = "postpage">
-      <h2 class="h2_new"><%= post.user.username%></h2>
+      <div class="post-user">
+        <img class="h-8 w-8 rounded-full" src=<%= post.user.avatar_url %> alt="">
+        <h2 class="h2_new"><%= post.user.username%></h2>
+      </div>
       <%= link_to post_path(post) do %>
         <%= cl_image_tag post.photo.key, height: 300, width: 400, crop: :fill, class:"post_page_card_image" %>
       <% end %>
