@@ -5,7 +5,10 @@
 </div>
 
 <div class="chatroom-container">
-  <h4 class='chat-username'><%= @chatroom.users.find { |user| user != current_user}.username %></h4>
+  <div class="chat-avatar">
+    <img class="h-8 w-8 rounded-full" src=<%= @chatroom.users.find { |user| user != current_user}.avatar_url %> alt="">
+    <h4 class='chat-username'><%= @chatroom.users.find { |user| user != current_user}.username %></h4>
+  </div>
     <div id="messages" data-chatroom-id="<%= @chatroom.id %>" style="height: 70vh; overflow: scroll;">
       <% @chatroom.messages.each do |message| %>
         <%= render "messages/message", message: message %>
