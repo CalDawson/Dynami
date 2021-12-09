@@ -1,24 +1,27 @@
 .post-show {
-  display: flex;
-  max-height: 800px;
   margin: auto;
-  max-width: 800px;
-  margin-top: 10vh;
+  width: 900px;
+  margin-top: 4vh;
   background-color: #fff;
   padding: 16px 8px;
   border-radius: 16px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  margin-bottom: 30px;
 
   .comment {
     display: flex;
     flex-wrap: wrap;
+    margin-left: 20px;
+    margin-top: 7px;
+    margin-bottom: 7px;
   }
   .caption {
     display: flex;
     padding-bottom: 4px;
-    border-bottom: 1px solid #666;
+    border-bottom: .5px solid rgba(102, 102, 102, 0.582);
     margin-bottom: 4px;
     flex-wrap: wrap;
+    margin-left: 20px;
   }
   img{
     border-radius: 16px;
@@ -144,4 +147,26 @@
       background-color: transparent!important;
       transition: all 0.3s ease-in-out;
     }
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+}
+
+.likedby {
+  margin-left: 20px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.show-page-posted-at {
+  margin-left: 20px;
+}
+
+.comment-btn {
+  background-color: #4F46E5;
+  color: white;
+  border-radius: 16px;
+  border: medium solid #4F46E5;
 }

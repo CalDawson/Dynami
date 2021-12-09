@@ -1,6 +1,14 @@
+<div class="back-button-container">
+<%= link_to root_path, class: "btn-back" do %>
+  <i class="far fa-arrow-alt-circle-left"></i>
+<% end %>
+</div>
+
 <div class="post-show">
-  <div class='img'>
-  <%= cl_image_tag @post.photo.key, height: 600, width: 400, crop: :fill %>
+  <div class="img-container">
+    <div class='img'>
+    <%= cl_image_tag @post.photo.key, crop: :fit %>
+    </div>
   </div>
   <div class="post-comments">
     <div class="coments">
@@ -34,6 +42,14 @@
           </div>
         </li>
       </ul>
+      <div class="likedby">
+        <% if @post.likes.count >= 1  %>
+          <p><%= pluralize @post.likes.count, "like" %></p>
+        <% end %>
+      </div>
+      <div class="posted-at show-page-posted-at">
+        <p>Posted at <%= @post.created_at.strftime("%l:%M%p") %> on the <%= @post.created_at.strftime("%d/%m/%C")  %></p>
+      </div>
       <%= simple_form_for([@post, @comment]) do |f| %>
         <div class="post-comment">
           <%= f.input :content, label: false, class: "comment-input", placeholder: "comment"%>
