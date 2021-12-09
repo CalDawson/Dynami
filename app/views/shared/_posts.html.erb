@@ -9,7 +9,11 @@
       <ul class = "list-inline">
         <li>
           <div class="like_subscribe <%= "liked" if liked?(post) %>" data-post-id="<%= post.id %>">
+          <% if liked?(post) %>
+            <i class="fas fa-heart"></i>
+          <% else %>
             <i class="far fa-heart"></i>
+          <% end %>
           </div>
         </li>
         <li>
