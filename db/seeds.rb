@@ -9,7 +9,7 @@ require "open-uri"
 Post.destroy_all
 Food.destroy_all
 Meal.destroy_all
-MealEatens.destroy_all
+MealEaten.destroy_all
 Chatroom.destroy_all
 Like.destroy_all
 WorkoutExercise.destroy_all
