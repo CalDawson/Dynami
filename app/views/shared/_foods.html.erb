@@ -1,29 +1,35 @@
-<div class="food-card-body">
-  <% foods.each do |food|  %>
+<% foods.each do |food|  %>
+  <div class="food-card-body">
     <div class="food-card">
       <div class = "food_name">
-        <h1><%= " #{food.name}" %></h1>
+        <h2><%= " #{food.name}" %></h2>
       </div>
       <div class="flex-container">
         <div class="flex-child magenta">
           <div class="card-heading">
+          <% total =  food.carbs + food.protein + food.fats %>
               <p><%= "Carbs: #{food.carbs}g" %></p>
+              <div class = "carbs_line">
+              <% carbs_total = food.carbs.fdiv(total) * 100%>
+              <div class = "carbs_percent" style = "width:<%=carbs_total%>%;">
+              </div>
+              </div>
               <p><%= "Proteins: #{food.protein}g" %></p>
+              <div class = "protein_line">
+               <% protein_total = food.protein.fdiv(total) * 100 %>
+              <div class = "protein_percent" style = "width:<%=protein_total%>%;">
+              </div>
+              </div>
               <p><%= "Fats: #{food.fats}g" %></p>
-              <p><%= "Calories: #{food.calories} cals" %></p>
-              <p><%= link_to "Delete this food", food_path(food), method: :delete, class:"delete_food_button" %></p>
+              <div class = "fats_line">
+              <% fats_total = food.fats.fdiv(total) * 100%>
+              <div class = "fats_percent" style = "width:<%=fats_total%>%;">
+              </div>
           </div>
         </div>
-        <div class="flex-child green">
-          <% total =  food.carbs + food.protein + food.fats %>
-          <% carbs_total = food.carbs.fdiv(total) * 100 %>
-          <% protein_total = food.protein.fdiv(total) * 100 %>
-          <% fats_total = food.fats.fdiv(total) * 100%>
-          <%# <div id="my-pie-chart" style = "background: conic-gradient brown <%= fats_total%>%, black <%= fats_total %>% <%= protein_total %>%, red <%= protein_total %>%)"></div> %>
-          <div id="my-pie-chart"></div>
-        </div>
-      </div>
+          <p class = "calories"><%= "Calories: #{food.calories} cals"%></p>
+          <p><%= link_to "Delete this food", food_path(food), method: :delete, class:"delete_food_button" %></p>
       </div>
     </div>
-  <% end %>
-</div>
+  </div>
+<% end %>
