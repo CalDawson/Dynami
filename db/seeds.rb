@@ -6,6 +6,17 @@ require "open-uri"
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Post.destroy_all
+Food.destroy_all
+Meal.destroy_all
+MealEatens.destroy_all
+Chatroom.destroy_all
+Like.destroy_all
+WorkoutExercise.destroy_all
+WorkoutSession.destroy_all
+Workout.destroy_all
+User.destroy_all
+
 j = 0
 
 user = User.create!({ avatar_url: "https://i.pravatar.cc/150?img=#{j}", username: 'jesse', email: 'jesse@dynami.com', password: '123456', password_confirmation: '123456' })
