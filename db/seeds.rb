@@ -8,9 +8,9 @@ require "open-uri"
 #   Character.create(name: 'Luke', movie: movies.first)
 Like.destroy_all
 Post.destroy_all
+MealEaten.destroy_all
 Food.destroy_all
 Meal.destroy_all
-MealEaten.destroy_all
 Chatroom.destroy_all
 WorkoutExercise.destroy_all
 WorkoutSession.destroy_all
