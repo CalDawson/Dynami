@@ -19,11 +19,11 @@ User.destroy_all
 
 j = 0
 
-user = User.create!({ avatar_url: "https://i.pravatar.cc/150?img=#{j}", username: 'jesse', email: 'jesse@dynami.com', password: '123456', password_confirmation: '123456' })
+User.create!({ avatar_url: "https://i.pravatar.cc/150?img=#{j}", username: 'jesse', email: 'jesse@dynami.com', password: '123456', password_confirmation: '123456' })
 j += 1
-User.create!({ avatar_url: "https://i.pravatar.cc/150?img=#{j}", username: 'callum', email: 'callum@dynami.com', password: '123456', password_confirmation: '123456' })
+user = User.create!({ avatar_url: "https://i.pravatar.cc/150?img=#{j}", username: 'callum', email: 'callum@dynami.com', password: '123456', password_confirmation: '123456' })
 j += 1
-User.create!({ avatar_url: "https://i.pravatar.cc/150?img=#{j}", username: 'sholom', email: 'sholom@dynami.com', password: '123456', password_confirmation: '123456' })
+User.create!({ avatar_url: "https://i.pravatar.cc/150?img=#{j}", username: 'josh small', email: 'josh@dynami.com', password: '123456', password_confirmation: '123456' })
 j += 1
 workout = Workout.create!({ workout_type: "Push", name: "Chest Day", user: user})
 WorkoutExercise.create!({ name: "Bench Press", workout: workout, reps: 10, sets: 3, weight: 70 })
