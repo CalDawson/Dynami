@@ -1,27 +1,36 @@
 // Specific CSS for your home-page
 .home-container {
-  height: 80vh;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.73)), url("https://images.unsplash.com/photo-1593079831268-3381b0db4a77?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80");
+  height: 100vh;
+  background-size: cover;
   display: flex;
-  align-items: center;
-  margin: auto;
-  max-width: 60%;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 32px;
   h1 {
-    color: #4F46E5;
+    color: white;
     font-size: 40px;
     font-weight: bold;
     font-family: 'Poppins', sans-serif!important;
     letter-spacing: 3px;
   }
   h3 {
+    color: white;
     margin-top: 10px;
     font-family: 'Poppins', sans-serif!important;
-    font-size: 24px;
+    font-size: 18px;
+  }
+  .home-container-body {
+    justify-content: center;
+    width: 80%;
+    padding: 0 24px;
   }
   .home-info {
     width: 50%;
     padding-right: 5%;
   }
   .home-form {
+    margin-top: 12px;
     background-color: #fff;
     width: 50%;
     font-size: 20px;
