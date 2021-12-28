@@ -1,16 +1,17 @@
 <div class="home-container">
-  <div class="home-info">
-    <h1>DYNAMI //</h1>
-    <h3>The place to get fit and eat healthy while staying social</h3>
+  <div class="home-container-body">
+    <div class="home-info">
+      <h1>Welcome To DYNAMI</h1>
+      <h3>The place to get fit and eat healthy. Lets face it staying motivated isn't always easy but with Dynami. We make keeping track of your exercises and food intake easy. Stay social and keep accountable with an easy to use social newsfeed!</h3>
+    </div>
+    <div class="home-form">
+      <%= render 'shared/sign_in' %>
+      <hr>
+      <%= link_to new_user_registration_path do %>
+        <div class="home-btn">
+        Sign up
+        </div>
+      <% end %>
+    </div>
   </div>
-  <div class="home-form">
-    <%= render 'shared/sign_in' %>
-    <hr>
-    <%= link_to new_user_registration_path do %>
-      <div class="home-btn">
-      Sign up
-      </div>
-    <% end %>
-  </div>
-
 </div>
