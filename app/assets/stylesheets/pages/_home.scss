@@ -28,6 +28,7 @@
   .home-info {
     width: 50%;
     padding-right: 5%;
+    min-width: 400px;
   }
   .home-form {
     margin-top: 12px;
@@ -37,6 +38,7 @@
     padding: 40px 16px;
     border-radius: 16px;
     box-shadow: 1px 1px 3px #888888;
+    min-width: 400px;
   }
   input {
     font-size: 24px;
