@@ -1,1 +1,8 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+Dynami, the fitness app to save you much needed time in a busy world and connect you with friends all around the globe.
+
+This app was created from idea to finished product in 2 weeks during the Le Wagon bootcamp.
+
+Login Details:
+email - callum@dynami.com
+password - 123456
+
